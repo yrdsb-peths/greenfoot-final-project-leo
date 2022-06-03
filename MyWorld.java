@@ -20,6 +20,8 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         setBackground(new GreenfootImage("SMB.png"));
+        Boundary bound1 = new Boundary();
+        addObject(bound1, 100, 100);
         
         Elephant ele = new Elephant();
         addObject(ele, 200, 200);
