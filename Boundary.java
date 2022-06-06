@@ -18,5 +18,6 @@ public class Boundary extends Actor
     {
         // Add your action code here.
         bound.scale(1, 1);
+        
     }
 }

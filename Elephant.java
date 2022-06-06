@@ -20,6 +20,7 @@ public class Elephant extends Actor
         {
             
             move(5);
+            yes();
             if(Greenfoot.isKeyDown("c"))
             {
                 
@@ -31,7 +32,7 @@ public class Elephant extends Actor
         {
             
             move(-5);
-            
+            yes();
             if(Greenfoot.isKeyDown("c"))
             {
                  
@@ -44,6 +45,7 @@ public class Elephant extends Actor
             int x = getX();
             int y = getY();
             setLocation(x, y -5);
+            yes();
             if(Greenfoot.isKeyDown("c"))
             {
                 
@@ -58,6 +60,7 @@ public class Elephant extends Actor
             int x = getX();
             int y = getY();
             setLocation(x, y + 5);
+            yes();
               if(Greenfoot.isKeyDown("c"))
             {
                 
@@ -65,6 +68,30 @@ public class Elephant extends Actor
             }
         }
         
-        
+       
+    }
+    
+    public void yes()
+    {
+        Actor wall = getOneIntersectingObject(Boundary.class);
+        if(wall!=null)
+        {
+            move(-1);
+            int x = getX();
+            int y = getY();
+            setLocation(x, y - 1);
+            
+        }
+    }
+    
+    public void setLocation(int x, int y)
+    {
+        int oldX = getX();
+        int oldY = getY();
+        super.setLocation(x, y);
+        if(!getIntersectingObjects(Boundary.class).isEmpty())
+        {
+            super.setLocation(oldX, oldY);
+        }
     }
 }
