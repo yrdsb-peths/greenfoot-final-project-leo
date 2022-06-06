@@ -18,7 +18,7 @@ public class Boundary extends Actor
     {
         // Add your action code here.
         
-        boundImage.scale(100, 50);
+        boundImage.scale(100, 30);
         setImage(boundImage);
         
     }
