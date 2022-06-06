@@ -13,11 +13,13 @@ public class Boundary extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    GreenfootImage bound = getImage();
-    public void Boundary()
+    private GreenfootImage boundImage = new GreenfootImage ("images/baal.png");
+    public Boundary()
     {
         // Add your action code here.
-        bound.scale(1, 1);
+        
+        boundImage.scale(100, 50);
+        setImage(boundImage);
         
     }
 }
