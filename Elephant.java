@@ -33,14 +33,14 @@ public class Elephant extends Actor
         for(int i = 0; i < downImages.length; i++)
         {
              downImages[i] = new GreenfootImage("images/animate1/down" + i + ".png");
-             downImages[i].scale(75, 75);
+             downImages[i].scale(50, 50);
              
         }
         
         for(int i = 0; i < downImages.length; i++)
         {
              upImages[i] = new GreenfootImage("images/animate3/up" + i + ".png");
-             upImages[i].scale(75, 75);
+             upImages[i].scale(50, 50);
              
         }
         
@@ -48,11 +48,11 @@ public class Elephant extends Actor
         for(int i = 0; i < rightImages.length; i++)
         {
              rightImages[i] = new GreenfootImage("images/animate2/right" + i + ".png");
-             rightImages[i].scale(75, 75);
+             rightImages[i].scale(50, 50);
              
              leftImages[i] = new GreenfootImage("images/animate2/right" + i + ".png");
              leftImages[i].mirrorHorizontally();
-             leftImages[i].scale(75, 75);
+             leftImages[i].scale(50, 50);
         }
         setImage(rightImages[0]);
         

@@ -24,6 +24,13 @@ public class MyWorld extends World
         Boundary bound1 = new Boundary();
         addObject(bound1, 200, 140);
         
+        Portal portal = new Portal();
+        this.addObject(portal, 100, 100);
+        
+        portal = new Portal();
+        this.addObject(portal, 400, 100);
+        
+        
         
         Elephant ele = new Elephant();
         addObject(ele, 200, 200);
