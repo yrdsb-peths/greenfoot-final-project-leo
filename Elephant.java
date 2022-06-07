@@ -20,6 +20,8 @@ public class Elephant extends Actor
     private SimpleTimer actionTimer;
     private int delay = 0;
     private boolean isFacingRight = true;
+    private boolean isFacingUp = true;
+    
     
     public Elephant()
     {
@@ -32,6 +34,14 @@ public class Elephant extends Actor
         {
              downImages[i] = new GreenfootImage("images/animate1/down" + i + ".png");
              downImages[i].scale(75, 75);
+             
+        }
+        
+        for(int i = 0; i < downImages.length; i++)
+        {
+             upImages[i] = new GreenfootImage("images/animate3/up" + i + ".png");
+             upImages[i].scale(75, 75);
+             
         }
         
         
@@ -62,6 +72,27 @@ public class Elephant extends Actor
             else
             {
                 setImage(leftImages[curIndex]);
+            }
+            
+       
+            curIndex++;
+            curIndex %= 2;
+            actionTimer.mark();
+        }
+    }
+    
+    public void idleActionTwo()
+    {
+        if(actionTimer.millisElapsed() > 100)
+        {
+            
+             if (isFacingUp)
+            {
+                setImage(upImages[curIndex]);
+            }
+            else
+            {
+                setImage(downImages[curIndex]);
             }
             curIndex++;
             curIndex %= 2;
@@ -108,6 +139,9 @@ public class Elephant extends Actor
             int y = getY();
             setLocation(x, y -5);
             
+            isFacingUp = true;
+            idleActionTwo();
+            
             
             if(Greenfoot.isKeyDown("c"))
             {
@@ -124,6 +158,8 @@ public class Elephant extends Actor
             int x = getX();
             int y = getY();
             setLocation(x, y + 5);
+            isFacingUp = false;
+            idleActionTwo();
             
               if(Greenfoot.isKeyDown("c"))
             {
