@@ -110,26 +110,26 @@ public class Elephant extends Actor
         if(Greenfoot.isKeyDown("d"))
         {
             isFacingRight = true;
-            move(5);
+            move(3);
             idleAction();
             
             if(Greenfoot.isKeyDown("c"))
             {
                 isFacingRight = true;
-                move(10);
+                move(5);
             }
         }
         
         if(Greenfoot.isKeyDown("a"))
         {
             isFacingRight = false;
-            move(-5);
+            move(-3);
             idleAction();
             
             if(Greenfoot.isKeyDown("c"))
             {
                  isFacingRight = false;
-                move(-10);
+                move(-5);
             }
         }
         
@@ -137,7 +137,7 @@ public class Elephant extends Actor
         {
             int x = getX();
             int y = getY();
-            setLocation(x, y -5);
+            setLocation(x, y -3);
             
             isFacingUp = true;
             idleActionTwo();
@@ -146,7 +146,7 @@ public class Elephant extends Actor
             if(Greenfoot.isKeyDown("c"))
             {
                 
-                setLocation(x, y -10);   
+                setLocation(x, y -5);   
             }
             
              
@@ -157,14 +157,14 @@ public class Elephant extends Actor
         {
             int x = getX();
             int y = getY();
-            setLocation(x, y + 5);
+            setLocation(x, y + 3);
             isFacingUp = false;
             idleActionTwo();
             
               if(Greenfoot.isKeyDown("c"))
             {
                 
-                setLocation(x, y + 10);   
+                setLocation(x, y + 5);   
             }
         }
         

@@ -31,31 +31,31 @@ public class MyWorld extends World
         addObject(bound3, 270, 440);
         
         Boundary bound4 = new Boundary(20, 250);
-        addObject(bound4, 30, 330);
+        addObject(bound4, 30, 335);
         
         Boundary bound5 = new Boundary(100, 130);
         addObject(bound5, 90, 275);
         
         Boundary bound6 = new Boundary(20, 120);
-        addObject(bound6, 10, 175);
+        addObject(bound6, 10, 160);
         
         Boundary bound7 = new Boundary(40, 60);
         addObject(bound7, 255, 500);
         
         Boundary bound8 = new Boundary(150, 150);
-        addObject(bound8, 60, 60);
+        addObject(bound8, 60, 30);
         
         Boundary bound9 = new Boundary(50, 50);
         addObject(bound9, 235, 75);
         
-        Boundary bound10 = new Boundary(90, 100);
-        addObject(bound10, 450, 250);
+        Boundary bound10 = new Boundary(90, 80);
+        addObject(bound10, 445, 220);
         
-        Boundary bound11 = new Boundary(200, 10);
+        Boundary bound11 = new Boundary(210, 10);
         addObject(bound11, 215, 100);
         
-        Boundary bound12 = new Boundary(10, 200);
-        addObject(bound12, 325, 50);
+        Boundary bound12 = new Boundary(1, 200);
+        addObject(bound12, 335, 50);
         
         Boundary bound13 = new Boundary(210, 10);
         addObject(bound13, 430, 30);
@@ -77,6 +77,9 @@ public class MyWorld extends World
         
         Boundary bound19 = new Boundary(150, 100);
         addObject(bound19, 470, 470);
+        
+        Boundary bound20 = new Boundary(150, 5);
+        addObject(bound20, 330, 530);
 
         
         
