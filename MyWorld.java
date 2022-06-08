@@ -18,11 +18,22 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 500, 1); 
-        setBackground(new GreenfootImage("images/SMB.png"));
+        super(578, 530, 1); 
+        setBackground(new GreenfootImage("images/accumula.png"));
         
-        Boundary bound1 = new Boundary();
-        addObject(bound1, 200, 140);
+        Boundary bound1 = new Boundary(300, 10);
+        addObject(bound1, 140, 470);
+        
+        Boundary bound2 = new Boundary(150, 10);
+        addObject(bound2, 205, 345);
+        
+        Boundary bound3 = new Boundary(20, 60);
+        addObject(bound3, 280, 440);
+        
+        Boundary bound4 = new Boundary(20, 60);
+        addObject(bound4, 100, 440);
+        
+        
         
         Portal portal = new Portal();
         this.addObject(portal, 100, 100);

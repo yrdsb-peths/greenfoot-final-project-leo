@@ -14,12 +14,12 @@ public class Boundary extends Actor
      */
     
     private GreenfootImage boundImage = new GreenfootImage ("images/baal.png");
-    public Boundary()
+    
+    public Boundary (int width, int height)
     {
-        // Add your action code here.
-        
-        boundImage.scale(100, 30);
+        boundImage.scale(width, height);
         setImage(boundImage);
-        
     }
+    
+   
 }
