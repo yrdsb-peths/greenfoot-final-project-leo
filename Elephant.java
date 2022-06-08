@@ -21,7 +21,7 @@ public class Elephant extends Actor
     private int delay = 0;
     private boolean isFacingRight = true;
     private boolean isFacingUp = true;
-    
+    int size = 50;//quick way to adjust all charater image sizes.
     
     public Elephant()
     {
@@ -33,14 +33,14 @@ public class Elephant extends Actor
         for(int i = 0; i < downImages.length; i++)
         {
              downImages[i] = new GreenfootImage("images/animate1/down" + i + ".png");
-             downImages[i].scale(50, 50);
+             downImages[i].scale(size, size);
              
         }
         
         for(int i = 0; i < downImages.length; i++)
         {
              upImages[i] = new GreenfootImage("images/animate3/up" + i + ".png");
-             upImages[i].scale(50, 50);
+             upImages[i].scale(size, size);
              
         }
         
@@ -48,11 +48,11 @@ public class Elephant extends Actor
         for(int i = 0; i < rightImages.length; i++)
         {
              rightImages[i] = new GreenfootImage("images/animate2/right" + i + ".png");
-             rightImages[i].scale(50, 50);
+             rightImages[i].scale(size, size);
              
              leftImages[i] = new GreenfootImage("images/animate2/right" + i + ".png");
              leftImages[i].mirrorHorizontally();
-             leftImages[i].scale(50, 50);
+             leftImages[i].scale(size, size);
         }
         setImage(rightImages[0]);
         
