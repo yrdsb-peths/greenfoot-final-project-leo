@@ -27,8 +27,11 @@ public class MyWorld extends World
         Portal portal = new Portal();
         this.addObject(portal, 100, 100);
         
-        portal = new Portal();
-        this.addObject(portal, 400, 100);
+        Portal portal2 = new Portal(portal);
+        this.addObject(portal2, 400, 100);
+        
+        
+        
         
         
         

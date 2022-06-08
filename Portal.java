@@ -12,6 +12,7 @@ public class Portal extends Actor
     private boolean active; 
     private GreenfootImage portalImage = new GreenfootImage ("images/tardis.png");
     
+    
 
     public Portal()
     {
@@ -19,11 +20,15 @@ public class Portal extends Actor
         setImage(portalImage);
     }
     
+   
+    
     
     public Portal(Portal portal)
     {
         this.setPortal(portal); 
         portal.setPortal(this); 
+        portalImage.scale(100, 100);
+        setImage(portalImage);
     }
     
 
@@ -41,13 +46,13 @@ public class Portal extends Actor
     
     public void act()
     {
-        Actor actor = this.getOneIntersectingObject(Elephant.class); 
+        Actor actor = getOneIntersectingObject(Elephant.class);
         if (!this.active && actor == null) this.active = true;
         if (this.active && actor != null) portal.getActor(actor); 
     }
     
    
-    private void getActor(Actor actor)
+    public void getActor(Actor actor)
     {
         if (this.getWorld().equals(actor.getWorld()))
         {
