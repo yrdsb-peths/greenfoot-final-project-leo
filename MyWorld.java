@@ -30,8 +30,11 @@ public class MyWorld extends World
         Boundary bound3 = new Boundary(20, 60);
         addObject(bound3, 280, 440);
         
-        Boundary bound4 = new Boundary(20, 60);
-        addObject(bound4, 100, 440);
+        Boundary bound4 = new Boundary(20, 250);
+        addObject(bound4, 30, 330);
+        
+        Boundary bound5 = new Boundary(100, 130);
+        addObject(bound5, 90, 275);
         
         
         

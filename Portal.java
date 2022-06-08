@@ -47,6 +47,10 @@ public class Portal extends Actor
     public void act()
     {
         Actor actor = getOneIntersectingObject(Elephant.class);
+        /*if(actor == null)
+        {
+            getWorld().showText("text", x, y);
+        }*/
         if (!this.active && actor == null) this.active = true;
         if (this.active && actor != null) portal.getActor(actor); 
     }
