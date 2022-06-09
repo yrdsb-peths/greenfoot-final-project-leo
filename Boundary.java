@@ -17,6 +17,7 @@ public class Boundary extends Actor
     
     public Boundary (int width, int height)
     {
+        
         boundImage.scale(width, height);
         setImage(boundImage);
     }

@@ -16,18 +16,16 @@ public class Portal extends Actor
 
     public Portal()
     {
-        portalImage.scale(100, 100);
+        portalImage.scale(75, 75);
         setImage(portalImage);
     }
     
    
-    
-    
     public Portal(Portal portal)
     {
         this.setPortal(portal); 
         portal.setPortal(this); 
-        portalImage.scale(100, 100);
+        portalImage.scale(75, 75);
         setImage(portalImage);
     }
     
@@ -47,10 +45,14 @@ public class Portal extends Actor
     public void act()
     {
         Actor actor = getOneIntersectingObject(Elephant.class);
-        /*if(actor == null)
+        if(actor == null)
         {
-            getWorld().showText("text", x, y);
-        }*/
+            getWorld().showText("null", 100, 100);
+        }
+        else if (actor != null)
+        {
+            getWorld().showText("not null", 100, 100);
+        }
         if (!this.active && actor == null) this.active = true;
         if (this.active && actor != null) portal.getActor(actor); 
     }

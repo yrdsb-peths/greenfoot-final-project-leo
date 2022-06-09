@@ -21,6 +21,15 @@ public class MyWorld extends World
         super(578, 530, 1); 
         setBackground(new GreenfootImage("images/accumula.png"));
         
+        
+        Portal portal = new Portal();
+        this.addObject(portal, 50, 160);
+        
+        portal = new Portal(portal);
+        this.addObject(portal, 350, 450);
+        
+        
+        
         Boundary bound1 = new Boundary(300, 10);
         addObject(bound1, 125, 470);
         
@@ -80,18 +89,11 @@ public class MyWorld extends World
         
         Boundary bound20 = new Boundary(150, 5);
         addObject(bound20, 330, 530);
-
+                
         
+               
         
-        /*        
-        Portal portal = new Portal();
-        this.addObject(portal, 100, 100);
-        
-        Portal portal2 = new Portal(portal);
-        this.addObject(portal2, 400, 100);
-        */
-        
-        
+                
         
         
         
@@ -110,6 +112,7 @@ public class MyWorld extends World
             showText(String.valueOf(m.getX()), 100, 100);
             showText(String.valueOf(m.getY()), 200, 100);
         }
-        
+
+
     }
 }
