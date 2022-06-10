@@ -33,7 +33,7 @@ public class MyWorld extends World
         this.addObject(portal, 50, 160); // Otherworld portal
         portal = new Portal(portal);
         OtherWorld world2 = new OtherWorld(); // creates a different world
-        world2.addObject(portal, 400, 300);
+        world2.addObject(portal, 650, 230);
         
         
         portal = new Portal();
