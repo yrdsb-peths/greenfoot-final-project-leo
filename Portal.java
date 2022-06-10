@@ -48,16 +48,17 @@ public class Portal extends Actor
         if(actor == null)
         {
             getWorld().showText("null", 100, 100);
+          
         }
         else if (actor != null)
         {
             getWorld().showText("not null", 100, 100);
         }
-        if(Greenfoot.isKeyDown("e"))
-        {
-            if (!this.active && actor == null) this.active = true;
-            if (this.active && actor != null) portal.getActor(actor); 
-        }
+        
+        
+        if (!this.active && actor == null) this.active = true;
+        if (this.active && actor != null) portal.getActor(actor); 
+        
         
     }
     

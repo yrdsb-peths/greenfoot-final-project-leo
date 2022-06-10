@@ -23,10 +23,24 @@ public class MyWorld extends World
         
         
         Portal portal = new Portal();
-        this.addObject(portal, 50, 160);
+        this.addObject(portal, 5011, 16011);
         
         portal = new Portal(portal);
-        this.addObject(portal, 350, 450);
+        this.addObject(portal, 35011, 45011);
+        
+        
+        portal = new Portal();
+        this.addObject(portal, 50, 160); // Otherworld portal
+        portal = new Portal(portal);
+        OtherWorld world2 = new OtherWorld(); // creates a different world
+        world2.addObject(portal, 400, 300);
+        
+        
+        portal = new Portal();
+        this.addObject(portal, 335, 500); // Thirdworld portal
+        portal = new Portal(portal);
+        ThirdWorld world3 = new ThirdWorld(); // creates a different world
+        world3.addObject(portal, 400, 300);
         
         
         
