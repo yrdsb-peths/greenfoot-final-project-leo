@@ -13,4 +13,5 @@ comment5.params=
 comment5.target=void\ act()
 comment6.params=actor
 comment6.target=void\ getActor(greenfoot.Actor)
+comment6.text=public\ void\ check()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ if(isTouching(Elephant.class))\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ getWorld().showText("press\ e",\ 400,\ 400);\r\n\ \ \ \ \ \ \ \ \ \ \ \ //Greenfoot.playSound("sounds/smw_coin.wav");\r\n\ \ \ \ \ \ \ \ \ \ \ \ MyWorld\ world\ \=\ (MyWorld)\ getWorld();\r\n\ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ else\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ getWorld().showText("",\ 400,\ 400);\r\n\ \ \ \ \ \ \ \ \ \ \ \ MyWorld\ world\ \=\ (MyWorld)\ getWorld();\r\n\ \ \ \ \ \ \ \ }\r\n}
 numComments=7

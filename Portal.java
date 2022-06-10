@@ -53,9 +53,29 @@ public class Portal extends Actor
         {
             getWorld().showText("not null", 100, 100);
         }
-        if (!this.active && actor == null) this.active = true;
-        if (this.active && actor != null) portal.getActor(actor); 
+        if(Greenfoot.isKeyDown("e"))
+        {
+            if (!this.active && actor == null) this.active = true;
+            if (this.active && actor != null) portal.getActor(actor); 
+        }
+        
     }
+    
+    /*public void check()
+    {
+        if(isTouching(Elephant.class))
+        {
+            getWorld().showText("press e", 400, 400);
+            //Greenfoot.playSound("sounds/smw_coin.wav");
+            MyWorld world = (MyWorld) getWorld();
+            
+        }
+        else
+        {
+            getWorld().showText("", 400, 400);
+            MyWorld world = (MyWorld) getWorld();
+        }
+    }*/
     
    
     public void getActor(Actor actor)

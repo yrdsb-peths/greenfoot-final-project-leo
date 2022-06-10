@@ -101,7 +101,18 @@ public class MyWorld extends World
         Elephant ele = new Elephant();
         addObject(ele, 200, 200);
         
+        spawnEgg();
+        
 
+    }
+    
+     public void spawnEgg()
+    {
+        int x = Greenfoot.getRandomNumber(100)+300;
+        int y = Greenfoot.getRandomNumber(100) + 200;
+        
+        Egg an = new Egg();
+        addObject(an, x, y);
     }
     
     public void act()
@@ -109,8 +120,8 @@ public class MyWorld extends World
          MouseInfo m = Greenfoot.getMouseInfo();
         if (m != null)
         {
-            showText(String.valueOf(m.getX()), 100, 100);
-            showText(String.valueOf(m.getY()), 200, 100);
+            showText(String.valueOf(m.getX()), 200, 200);
+            showText(String.valueOf(m.getY()), 300, 200);
         }
 
 
