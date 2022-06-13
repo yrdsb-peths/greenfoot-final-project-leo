@@ -15,11 +15,17 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+    
+    //Greefootsound music = new Greenfootsound("x.wav");
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(578, 530, 1); 
         setBackground(new GreenfootImage("images/accumula.png"));
+        
+        
+        // muisc .play();
+        
         
         
         Portal portal = new Portal();
@@ -41,6 +47,12 @@ public class MyWorld extends World
         portal = new Portal(portal);
         ThirdWorld world3 = new ThirdWorld(); // creates a different world
         world3.addObject(portal, 700, 170);
+        
+        portal = new Portal();
+        this.addObject(portal, 152, 100); // house1 portal
+        portal = new Portal(portal);
+        MyHouse1 house1 = new MyHouse1(); // creates a different world
+        house1.addObject(portal, 700, 170);
         
         
         
@@ -67,7 +79,7 @@ public class MyWorld extends World
         addObject(bound7, 255, 500);
         
         Boundary bound8 = new Boundary(150, 150);
-        addObject(bound8, 60, 30);
+        addObject(bound8, 50, 50);
         
         Boundary bound9 = new Boundary(50, 50);
         addObject(bound9, 235, 75);
@@ -76,7 +88,7 @@ public class MyWorld extends World
         addObject(bound10, 445, 220);
         
         Boundary bound11 = new Boundary(210, 10);
-        addObject(bound11, 215, 100);
+        addObject(bound11, 215, 65);
         
         Boundary bound12 = new Boundary(1, 200);
         addObject(bound12, 335, 50);
@@ -85,7 +97,7 @@ public class MyWorld extends World
         addObject(bound13, 430, 30);
         
         Boundary bound14 = new Boundary(10, 180);
-        addObject(bound14, 530, 110);
+        addObject(bound14, 530, 100);
         
         Boundary bound15 = new Boundary(130, 10);
         addObject(bound15, 465, 180);
