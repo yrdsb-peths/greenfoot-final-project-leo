@@ -52,7 +52,7 @@ public class MyWorld extends World
         this.addObject(portal, 152, 100); // house1 portal
         portal = new Portal(portal);
         MyHouse1 house1 = new MyHouse1(); // creates a different world
-        house1.addObject(portal, 700, 170);
+        house1.addObject(portal, 150, 350);
         
         
         
@@ -135,11 +135,28 @@ public class MyWorld extends World
     
      public void spawnEgg()
     {
-        int x = Greenfoot.getRandomNumber(100)+300;
-        int y = Greenfoot.getRandomNumber(100) + 200;
+        int rand = Greenfoot.getRandomNumber(100);
         
-        Egg an = new Egg();
-        addObject(an, x, y);
+        if (rand <= 50)
+        {
+            int x = Greenfoot.getRandomNumber(100)+ 300;
+            int y = Greenfoot.getRandomNumber(100) + 200;
+            
+            Egg an = new Egg();
+            addObject(an, x, y);
+        }
+        if (rand >= 49)
+        {
+            //int x = Greenfoot.getRandomNumber(100);
+            //int y = Greenfoot.getRandomNumber(100);
+            
+            Egg an = new Egg();
+            MyHouse1 house1 = new MyHouse1(); // creates a different world
+            house1.addObject(an, 50, 50);
+            
+        }
+        
+        
     }
     
     public void act()
