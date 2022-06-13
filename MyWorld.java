@@ -15,6 +15,9 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+    MyHouse1 house1;
+    MyHouse2 house2;
+    
     
     //Greefootsound music = new Greenfootsound("x.wav");
     public MyWorld()
@@ -51,8 +54,15 @@ public class MyWorld extends World
         portal = new Portal();
         this.addObject(portal, 152, 100); // house1 portal
         portal = new Portal(portal);
-        MyHouse1 house1 = new MyHouse1(); // creates a different world
+        house1 = new MyHouse1(); // creates a different world
         house1.addObject(portal, 150, 350);
+        
+        portal = new Portal();
+        this.addObject(portal, 300, 100); // house2 portal
+        portal = new Portal(portal);
+        house2 = new MyHouse2(); // creates a different world
+        house2.addObject(portal, 150, 350);
+
         
         
         
@@ -147,12 +157,12 @@ public class MyWorld extends World
         }
         if (rand >= 49)
         {
-            //int x = Greenfoot.getRandomNumber(100);
-            //int y = Greenfoot.getRandomNumber(100);
+            int x = Greenfoot.getRandomNumber(100);
+            int y = Greenfoot.getRandomNumber(100);
             
             Egg an = new Egg();
-            MyHouse1 house1 = new MyHouse1(); // creates a different world
-            house1.addObject(an, 50, 50);
+            // MyHouse1 house1 = new MyHouse1(); // creates a different world
+            house1.spawnEgg(x, y);
             
         }
         
