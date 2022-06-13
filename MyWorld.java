@@ -17,6 +17,7 @@ public class MyWorld extends World
      */
     MyHouse1 house1;
     MyHouse2 house2;
+    MyCenter center;
     
     
     //Greefootsound music = new Greenfootsound("x.wav");
@@ -62,6 +63,12 @@ public class MyWorld extends World
         portal = new Portal(portal);
         house2 = new MyHouse2(); // creates a different world
         house2.addObject(portal, 150, 350);
+        
+        portal = new Portal();
+        this.addObject(portal, 455, 270); // center portal
+        portal = new Portal(portal);
+        center = new MyCenter(); // creates a different world
+        center.addObject(portal, 150, 350);
 
         
         
@@ -95,7 +102,7 @@ public class MyWorld extends World
         addObject(bound9, 235, 75);
         
         Boundary bound10 = new Boundary(90, 80);
-        addObject(bound10, 445, 220);
+        addObject(bound10, 445, 200);
         
         Boundary bound11 = new Boundary(210, 10);
         addObject(bound11, 215, 65);
