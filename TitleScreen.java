@@ -11,8 +11,8 @@ public class TitleScreen extends World
     Label titleLabel = new Label("Egg Hunt", 90);
     Label titleLabel2 = new Label("Press <Space> To Play", 30);
     Label titleLabel3 = new Label("Press <e> For Instuctions", 30);
-    GreenfootSound mainTheme = new GreenfootSound("Genshin Impact Main Theme.mp3");
     
+    GreenfootSound mainTheme = new GreenfootSound("Genshin.mp3");
     /**
      * Constructor for objects of class TitleScreen.
      * 
@@ -39,13 +39,18 @@ public class TitleScreen extends World
         {
             Difficulty GameWorld = new Difficulty();
             Greenfoot.setWorld(GameWorld);
+            mainTheme.stop();
         }
         
         if(Greenfoot.isKeyDown("e"))
         {
             Tutorial gameWorld = new Tutorial();
             Greenfoot.setWorld(gameWorld);
+            mainTheme.stop();
         }
+        
+        mainTheme.setVolume(50);
+        mainTheme.play();
         
     }
 }

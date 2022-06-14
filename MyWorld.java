@@ -41,8 +41,7 @@ public class MyWorld extends World
         setBackground(new GreenfootImage("images/accumula.png"));
         addObject(timeLabel, 300, 300);
         
-        music.setVolume(25);
-        music.play();
+        
         
         
         
@@ -229,6 +228,8 @@ public class MyWorld extends World
             music.stop();
             
         }
+        
+        
         
         
         
