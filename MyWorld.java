@@ -95,7 +95,7 @@ public class MyWorld extends World
         this.addObject(portal, 70, 350); // building portal
         portal = new Portal(portal);
         build = new MyBuilding(); // creates a different world
-        build.addObject(portal, 320, 440);
+        build.addObject(portal, 580, 420);
         
         
 

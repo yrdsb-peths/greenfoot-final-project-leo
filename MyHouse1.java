@@ -20,6 +20,12 @@ public class MyHouse1 extends World
         super(316, 364, 1); 
         setBackground(new GreenfootImage("images/lobby1.jpg"));
         
+        Boundary bound1 = new Boundary(200, 10);
+        addObject(bound1, 40, 400);
+        
+        Boundary bound2 = new Boundary(200, 10);
+        addObject(bound2, 40, 400);
+        
         
     }
     

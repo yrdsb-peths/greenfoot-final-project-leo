@@ -1,24 +1,25 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class ThirdHouse1 here.
+ * Write a description of class ThirdRed here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ThirdHouse1 extends World
+public class ThirdRed extends World
 {
 
     /**
-     * Constructor for objects of class ThirdHouse1.
+     * Constructor for objects of class ThirdRed.
      * 
      */
-    public ThirdHouse1()
+    public ThirdRed()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(400, 292, 1); 
-        setBackground(new GreenfootImage("images/ThirdHouse1.png"));
+        super(800, 608, 1); 
+        setBackground(new GreenfootImage("images/ThirdHouse3.png"));
     }
+    
     public void act()
     {
          MouseInfo m = Greenfoot.getMouseInfo();
