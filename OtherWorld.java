@@ -15,6 +15,8 @@ public class OtherWorld extends World
      */
     
     OtherHouse1 other1;
+    OtherHouse2 other2;
+    OtherHouse3 other3;
     public OtherWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -26,10 +28,22 @@ public class OtherWorld extends World
         this.addObject(portal, 5011, 16011);
         
         portal = new Portal();
-        this.addObject(portal, 100, 160); // otherHouse portal
+        this.addObject(portal, 100, 160); // otherHouse1 portal
         portal = new Portal(portal);
         other1 = new OtherHouse1(); // creates a different world
-        other1.addObject(portal, 320, 440);
+        other1.addObject(portal, 270, 400);
+        
+        portal = new Portal();
+        this.addObject(portal, 140, 550); // otherHous2 portal
+        portal = new Portal(portal);
+        other2 = new OtherHouse2(); // creates a different world
+        other2.addObject(portal, 270, 400);
+        
+        portal = new Portal();
+        this.addObject(portal, 550, 420); // otherHouse3 portal
+        portal = new Portal(portal);
+        other3 = new OtherHouse3(); // creates a different world
+        other3.addObject(portal, 270, 400);
         
     }
     
