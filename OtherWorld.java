@@ -14,6 +14,11 @@ public class OtherWorld extends World
      * 
      */
     
+    int time = Difficulty.timeValue;
+    SimpleTimer timer = new SimpleTimer();
+    //label in my world
+    Label timeLabel = new Label("", 60);
+    
     OtherHouse1 other1;
     OtherHouse2 other2;
     OtherHouse3 other3;
@@ -22,6 +27,8 @@ public class OtherWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(688, 636, 1); 
         setBackground(new GreenfootImage("images/town2.png"));
+        
+        addObject(timeLabel, 300, 300);// add time label
         
         
         Portal portal = new Portal();
@@ -38,7 +45,7 @@ public class OtherWorld extends World
         portal = new Portal(portal);
         other2 = new OtherHouse2(); // creates a different world
         other2.addObject(portal, 270, 400);
-        
+    
         portal = new Portal();
         this.addObject(portal, 550, 420); // otherHouse3 portal
         portal = new Portal(portal);
@@ -55,7 +62,18 @@ public class OtherWorld extends World
             showText(String.valueOf(m.getX()), 200, 200);
             showText(String.valueOf(m.getY()), 300, 200);
         }
+        
+        if(timer.millisElapsed() >= 1000)
+        {
+            time--;
+            timeLabel.setValue("time left: " + time);
+            timer.mark();
+        }
+        
+        
 
 
     }
+    
+    
 }

@@ -20,24 +20,25 @@ public class MyWorld extends World
     MyHouse3 house3;
     MyCenter center;
     MyBuilding build;
+    OtherWorld other;
     
-    //int time;
-    //SimpleTimer timer = new SimpleTimer();
+    int time = Difficulty.timeValue;
+    SimpleTimer timer = new SimpleTimer();
     //label in my world
-    //Label timeLabel = new Label("", 60);
+    Label timeLabel = new Label("", 60);
     
     
     
     
     GreenfootSound music = new GreenfootSound("accumula town.mp3");
     
-    private int timer = 60;
+    
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(578, 530, 1); 
         setBackground(new GreenfootImage("images/accumula.png"));
-        //addObject(timeLabel, 150, 300);
+        addObject(timeLabel, 300, 300);
         
         music.play();
         
@@ -97,9 +98,6 @@ public class MyWorld extends World
 
 
 
-        
-        
-        
         
         Boundary bound1 = new Boundary(300, 10);
         addObject(bound1, 125, 470);
@@ -212,11 +210,21 @@ public class MyWorld extends World
             showText(String.valueOf(m.getY()), 300, 200);
         }
         
-         /*if(timer.millisElapsed() >= 10000){
+        if(timer.millisElapsed() >= 1000)
+        {
             time--;
-            timeLabel.setValue(time);
+            timeLabel.setValue("time left: " + time);
             timer.mark();
-        }*/
+        }
+        
+        if (time == 0)
+        {
+            LoseScreen gameWorld = new LoseScreen();
+            Greenfoot.setWorld(gameWorld);
+            
+        }
+        
+        
         
         
         

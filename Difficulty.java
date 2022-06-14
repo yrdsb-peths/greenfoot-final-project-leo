@@ -21,9 +21,9 @@ public class Difficulty extends World
     Label titleLabel5 = new Label("2 Minutes (Press <3>)", 30);
     Label titleLabel6 = new Label("3 Minutes (Press <4>)", 30);
     
-    //SimpleTimer time1 = new SimpleTimer();
+    //SimpleTimer time2 = new SimpleTimer();
     
-    
+    public static int timeValue;
     public Difficulty()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -47,27 +47,30 @@ public class Difficulty extends World
         
         if(Greenfoot.isKeyDown("1"))
         {
-            MyWorld GameWorld = new MyWorld();
-            
-            Greenfoot.setWorld(GameWorld);
+            timeValue = 30;
+            MyWorld gameWorld = new MyWorld();
+            Greenfoot.setWorld(gameWorld);
 
             
         }
         
         if(Greenfoot.isKeyDown("2"))
         {
+            timeValue = 60;
             MyWorld GameWorld = new MyWorld();
             Greenfoot.setWorld(GameWorld);
         }
         
         if(Greenfoot.isKeyDown("3"))
         {
+            timeValue = 120;
             MyWorld GameWorld = new MyWorld();
             Greenfoot.setWorld(GameWorld);
         }
         
         if(Greenfoot.isKeyDown("4"))
         {
+            timeValue = 180;
             MyWorld GameWorld = new MyWorld();
             Greenfoot.setWorld(GameWorld);
         }
