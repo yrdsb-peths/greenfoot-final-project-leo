@@ -168,6 +168,7 @@ public class Elephant extends Actor
             }
         }
         
+        win();
        
     }
     
@@ -180,6 +181,21 @@ public class Elephant extends Actor
         if(!getIntersectingObjects(Boundary.class).isEmpty())
         {
             super.setLocation(oldX, oldY);
+        }
+    }
+    
+    public void win()
+    {
+        if(isTouching(Egg.class))
+        {
+            removeTouching(Egg.class);
+            //Greenfoot.playSound("sounds/smw_coin.wav");
+
+            WinScreen gameWorld = new WinScreen();
+            Greenfoot.setWorld(gameWorld);
+            
+            
+            
         }
     }
     
