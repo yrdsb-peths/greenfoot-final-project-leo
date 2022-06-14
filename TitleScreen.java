@@ -12,7 +12,7 @@ public class TitleScreen extends World
     Label titleLabel2 = new Label("Press <Space> To Play", 30);
     Label titleLabel3 = new Label("Press <e> For Instuctions", 30);
     
-    GreenfootSound mainTheme = new GreenfootSound("Genshin.mp3");
+    static GreenfootSound mainTheme = new GreenfootSound("Genshin.mp3");
     /**
      * Constructor for objects of class TitleScreen.
      * 
@@ -23,8 +23,7 @@ public class TitleScreen extends World
         super(600, 533, 1);
         setBackground(new GreenfootImage("images/egg1.png"));
         
-        mainTheme.setVolume(25);
-        mainTheme.play();
+        
         
         addObject(titleLabel, 300, 200);
         addObject(titleLabel2, 300, 400);
@@ -35,22 +34,28 @@ public class TitleScreen extends World
     
     public void act()
     {
+        
+        
+        mainTheme.setVolume(50);
+        mainTheme.play();
+        
         if(Greenfoot.isKeyDown("space"))
         {
             Difficulty GameWorld = new Difficulty();
             Greenfoot.setWorld(GameWorld);
-            mainTheme.stop();
+            
         }
         
         if(Greenfoot.isKeyDown("e"))
         {
             Tutorial gameWorld = new Tutorial();
             Greenfoot.setWorld(gameWorld);
-            mainTheme.stop();
+            
         }
         
-        mainTheme.setVolume(50);
-        mainTheme.play();
+        
+        
+        
         
     }
 }

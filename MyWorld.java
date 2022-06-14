@@ -31,7 +31,7 @@ public class MyWorld extends World
     
     
     
-    GreenfootSound music = new GreenfootSound("accumula town.mp3");
+    static GreenfootSound music = new GreenfootSound("accumula town.mp3");
     
     
     public MyWorld()
@@ -42,7 +42,8 @@ public class MyWorld extends World
         addObject(timeLabel, 300, 300);
         
         
-        
+        music.setVolume(25);
+        music.play();
         
         
         

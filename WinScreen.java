@@ -13,9 +13,13 @@ public class WinScreen extends World
      * Constructor for objects of class WinScreen.
      * 
      */
+    
+    
     public WinScreen()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
+        super(256, 224, 1);
+        setBackground(new GreenfootImage("images/win1.jpg"));
+        MyWorld.music.stop();
     }
 }
