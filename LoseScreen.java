@@ -20,7 +20,7 @@ public class LoseScreen extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1);
-        addObject(titleLabel, 100, 100);
+        addObject(titleLabel, 200, 100);
         loseTheme.setVolume(20);
         loseTheme.play();
     }
@@ -31,6 +31,7 @@ public class LoseScreen extends World
         {
             TitleScreen gameWorld = new TitleScreen();
             Greenfoot.setWorld(gameWorld);
+            loseTheme.stop();
         }
     }
 }

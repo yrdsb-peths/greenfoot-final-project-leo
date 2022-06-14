@@ -11,6 +11,7 @@ public class TitleScreen extends World
     Label titleLabel = new Label("Egg Hunt", 90);
     Label titleLabel2 = new Label("Press <Space> To Play", 30);
     Label titleLabel3 = new Label("Press <e> For Instuctions", 30);
+    Label titleLabel4 = new Label("By Leo Xu", 30);
     
     static GreenfootSound mainTheme = new GreenfootSound("Genshin.mp3");
     /**
@@ -28,6 +29,7 @@ public class TitleScreen extends World
         addObject(titleLabel, 300, 200);
         addObject(titleLabel2, 300, 400);
         addObject(titleLabel3, 300, 450);
+        addObject(titleLabel4, 300, 300);
         
         
     }

@@ -44,12 +44,7 @@ public class Tutorial extends World
             Greenfoot.setWorld(gameWorld);
         }
         
-         MouseInfo m = Greenfoot.getMouseInfo();
-        if (m != null)
-        {
-            showText(String.valueOf(m.getX()), 200, 200);
-            showText(String.valueOf(m.getY()), 300, 200);
-        }
+        
         
         
     }

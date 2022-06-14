@@ -61,6 +61,7 @@ public class Difficulty extends World
             timeValue = 60;
             MyWorld GameWorld = new MyWorld();
             Greenfoot.setWorld(GameWorld);
+            TitleScreen.mainTheme.stop();
         }
         
         if(Greenfoot.isKeyDown("3"))
@@ -68,6 +69,7 @@ public class Difficulty extends World
             timeValue = 120;
             MyWorld GameWorld = new MyWorld();
             Greenfoot.setWorld(GameWorld);
+            TitleScreen.mainTheme.stop();
         }
         
         if(Greenfoot.isKeyDown("4"))
@@ -75,13 +77,9 @@ public class Difficulty extends World
             timeValue = 180;
             MyWorld GameWorld = new MyWorld();
             Greenfoot.setWorld(GameWorld);
+            TitleScreen.mainTheme.stop();
         }
         
-         MouseInfo m = Greenfoot.getMouseInfo();
-        if (m != null)
-        {
-            showText(String.valueOf(m.getX()), 200, 200);
-            showText(String.valueOf(m.getY()), 300, 200);
-        }
+        
     }
 }
