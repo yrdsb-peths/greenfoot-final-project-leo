@@ -21,19 +21,25 @@ public class MyWorld extends World
     MyCenter center;
     MyBuilding build;
     
+    //int time;
+    //SimpleTimer timer = new SimpleTimer();
+    //label in my world
+    //Label timeLabel = new Label("", 60);
     
     
     
     
-    //Greefootsound music = new Greenfootsound("x.wav");
+    GreenfootSound music = new GreenfootSound("accumula town.mp3");
+    
+    private int timer = 60;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(578, 530, 1); 
         setBackground(new GreenfootImage("images/accumula.png"));
+        //addObject(timeLabel, 150, 300);
         
-        
-        // muisc .play();
+        music.play();
         
         
         
@@ -205,6 +211,15 @@ public class MyWorld extends World
             showText(String.valueOf(m.getX()), 200, 200);
             showText(String.valueOf(m.getY()), 300, 200);
         }
+        
+         /*if(timer.millisElapsed() >= 10000){
+            time--;
+            timeLabel.setValue(time);
+            timer.mark();
+        }*/
+        
+        
+        
         
         
 

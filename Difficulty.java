@@ -21,6 +21,8 @@ public class Difficulty extends World
     Label titleLabel5 = new Label("2 Minutes (Press <3>)", 30);
     Label titleLabel6 = new Label("3 Minutes (Press <4>)", 30);
     
+    //SimpleTimer time1 = new SimpleTimer();
+    
     
     public Difficulty()
     {    
@@ -46,8 +48,9 @@ public class Difficulty extends World
         if(Greenfoot.isKeyDown("1"))
         {
             MyWorld GameWorld = new MyWorld();
-            Greenfoot.setWorld(GameWorld);
             
+            Greenfoot.setWorld(GameWorld);
+
             
         }
         
