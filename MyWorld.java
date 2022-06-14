@@ -22,6 +22,9 @@ public class MyWorld extends World
     MyBuilding build;
     
     
+    
+    
+    
     //Greefootsound music = new Greenfootsound("x.wav");
     public MyWorld()
     {    
@@ -202,6 +205,8 @@ public class MyWorld extends World
             showText(String.valueOf(m.getX()), 200, 200);
             showText(String.valueOf(m.getY()), 300, 200);
         }
+        
+        
 
 
     }
