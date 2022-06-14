@@ -27,7 +27,8 @@ public class Difficulty extends World
     public Difficulty()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(600, 309, 1); 
+        setBackground(new GreenfootImage("images/diff1.png"));
         
         addObject(titleLabel, 50, 50);
         addObject(titleLabel2, 75, 75);
