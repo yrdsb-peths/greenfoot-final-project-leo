@@ -8,9 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class TitleScreen extends World
 {
-    Label titleLabel = new Label("Egg Hunt", 60);
+    Label titleLabel = new Label("Egg Hunt", 90);
     Label titleLabel2 = new Label("Press <Space> To Play", 30);
     Label titleLabel3 = new Label("Press <e> For Instuctions", 30);
+    
     /**
      * Constructor for objects of class TitleScreen.
      * 
@@ -18,11 +19,12 @@ public class TitleScreen extends World
     public TitleScreen()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
+        super(600, 533, 1);
+        setBackground(new GreenfootImage("images/egg1.png"));
         
-        addObject(titleLabel, getWidth()/2, getHeight()/2);
-        addObject(titleLabel2, 150, 300);
-        addObject(titleLabel3, 200, 100);
+        addObject(titleLabel, 300, 200);
+        addObject(titleLabel2, 300, 400);
+        addObject(titleLabel3, 300, 450);
         
         
     }

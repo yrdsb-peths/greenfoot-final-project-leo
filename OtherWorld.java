@@ -14,10 +14,14 @@ public class OtherWorld extends World
      * 
      */
     
+    MyWorld my;
+    
     int time = Difficulty.timeValue;
     SimpleTimer timer = new SimpleTimer();
     //label in my world
     Label timeLabel = new Label("", 60);
+    
+    
     
     OtherHouse1 other1;
     OtherHouse2 other2;
@@ -65,15 +69,18 @@ public class OtherWorld extends World
         
         if(timer.millisElapsed() >= 1000)
         {
+            timer.mark();
             time--;
             timeLabel.setValue("time left: " + time);
-            timer.mark();
+                        
         }
         
         
 
 
     }
+    
+    
     
     
 }

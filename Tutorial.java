@@ -23,6 +23,9 @@ public class Tutorial extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
+        setBackground(new GreenfootImage("images/diff1.png"));
+        
+        
         addObject(titleLabel, 100, 100);
         addObject(titleLabel2, 100, 150);
         addObject(titleLabel3, 100, 200);

@@ -20,7 +20,8 @@ public class MyWorld extends World
     MyHouse3 house3;
     MyCenter center;
     MyBuilding build;
-    OtherWorld other;
+    
+    
     
     int time = Difficulty.timeValue;
     SimpleTimer timer = new SimpleTimer();
@@ -40,7 +41,9 @@ public class MyWorld extends World
         setBackground(new GreenfootImage("images/accumula.png"));
         addObject(timeLabel, 300, 300);
         
+        music.setVolume(25);
         music.play();
+        
         
         
         
@@ -212,15 +215,18 @@ public class MyWorld extends World
         
         if(timer.millisElapsed() >= 1000)
         {
+            timer.mark();
             time--;
             timeLabel.setValue("time left: " + time);
-            timer.mark();
+            
+            
         }
         
         if (time == 0)
         {
             LoseScreen gameWorld = new LoseScreen();
             Greenfoot.setWorld(gameWorld);
+            music.stop();
             
         }
         
@@ -233,4 +239,6 @@ public class MyWorld extends World
 
 
     }
+    
+    
 }
