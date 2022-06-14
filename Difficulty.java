@@ -14,7 +14,7 @@ public class Difficulty extends World
      * 
      */
     
-    Label titleLabel = new Label("Choose Time limit, Then Start", 30);
+    Label titleLabel = new Label("Choose Time Limit Difficulty, Then Game Will Start", 30);
     Label titleLabel2 = new Label("Press <f> To Go Back", 30);
     Label titleLabel3 = new Label("30 Seconds (Press <1>)", 30);
     Label titleLabel4 = new Label("1 Minute (Press <2>)", 30);
@@ -27,15 +27,15 @@ public class Difficulty extends World
     public Difficulty()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 309, 1); 
+        super(1050, 540, 1); 
         setBackground(new GreenfootImage("images/diff1.png"));
         
-        addObject(titleLabel, 50, 50);
-        addObject(titleLabel2, 75, 75);
-        addObject(titleLabel3, 75, 100);
-        addObject(titleLabel4, 75, 150);
-        addObject(titleLabel5, 75, 200);
-        addObject(titleLabel6, 75, 250);
+        addObject(titleLabel, 400, 80);
+        addObject(titleLabel2, 150, 500);
+        addObject(titleLabel3, 460, 200);
+        addObject(titleLabel4, 475, 250);
+        addObject(titleLabel5, 470, 300);
+        addObject(titleLabel6, 470, 350);
     }
     
     public void act()
@@ -76,5 +76,11 @@ public class Difficulty extends World
             Greenfoot.setWorld(GameWorld);
         }
         
+         MouseInfo m = Greenfoot.getMouseInfo();
+        if (m != null)
+        {
+            showText(String.valueOf(m.getX()), 200, 200);
+            showText(String.valueOf(m.getY()), 300, 200);
+        }
     }
 }

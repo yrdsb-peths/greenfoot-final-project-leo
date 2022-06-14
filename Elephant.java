@@ -23,6 +23,9 @@ public class Elephant extends Actor
     private boolean isFacingUp = true;
     int size = 50;//quick way to adjust all charater image sizes.
     
+   
+    
+    
     public Elephant()
     {
         upImages = new GreenfootImage[2];

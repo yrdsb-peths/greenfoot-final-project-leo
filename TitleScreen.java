@@ -11,6 +11,7 @@ public class TitleScreen extends World
     Label titleLabel = new Label("Egg Hunt", 90);
     Label titleLabel2 = new Label("Press <Space> To Play", 30);
     Label titleLabel3 = new Label("Press <e> For Instuctions", 30);
+    GreenfootSound mainTheme = new GreenfootSound("Genshin Impact Main Theme.mp3");
     
     /**
      * Constructor for objects of class TitleScreen.
@@ -21,6 +22,9 @@ public class TitleScreen extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 533, 1);
         setBackground(new GreenfootImage("images/egg1.png"));
+        
+        mainTheme.setVolume(25);
+        mainTheme.play();
         
         addObject(titleLabel, 300, 200);
         addObject(titleLabel2, 300, 400);

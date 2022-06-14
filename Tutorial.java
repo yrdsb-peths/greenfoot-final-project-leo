@@ -8,11 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Tutorial extends World
 {
-    Label titleLabel = new Label("wasd to move", 30);
+    Label titleLabel = new Label("Use <wasd> To Move", 30);
     Label titleLabel2 = new Label("Press <c> To Sprint", 30);
     Label titleLabel3 = new Label("Press <f> To Go Back", 30);
-    Label titleLabel4 = new Label("Objective: Find The Egg to Win", 30);
+    Label titleLabel4 = new Label("Objective: Find And Touch The Egg to Win", 30);
     Label titleLabel5 = new Label("You Can Go Through Doors and Entrances", 30);
+    Label titleLabel6 = new Label("The Egg Is Hidden In One Of the Room/Building", 30);
     
     
     /**
@@ -27,11 +28,12 @@ public class Tutorial extends World
         
         
         
-        addObject(titleLabel, 100, 100);
-        addObject(titleLabel2, 100, 150);
-        addObject(titleLabel3, 100, 200);
-        addObject(titleLabel4, 100, 250);
-        addObject(titleLabel5, 100, 300);
+        addObject(titleLabel, 150, 300);
+        addObject(titleLabel2, 150, 350);
+        addObject(titleLabel3, 150, 500);
+        addObject(titleLabel4, 500, 400);
+        addObject(titleLabel5, 500, 20);
+        addObject(titleLabel5, 200, 350);
     }
     
     public void act()
@@ -41,6 +43,15 @@ public class Tutorial extends World
             TitleScreen gameWorld = new TitleScreen();
             Greenfoot.setWorld(gameWorld);
         }
+        
+         MouseInfo m = Greenfoot.getMouseInfo();
+        if (m != null)
+        {
+            showText(String.valueOf(m.getX()), 200, 200);
+            showText(String.valueOf(m.getY()), 300, 200);
+        }
+        
+        
     }
     
 }
