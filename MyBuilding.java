@@ -1,23 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class MyCenter here.
+ * Write a description of class MyBuilding here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class MyCenter extends World
+public class MyBuilding extends World
 {
 
     /**
-     * Constructor for objects of class MyCenter.
+     * Constructor for objects of class MyBuilding.
      * 
      */
-    public MyCenter()
+    public MyBuilding()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(645, 450, 1); 
-        setBackground(new GreenfootImage("images/pokeCenter.png"));
+        super(640, 480, 1); 
+        setBackground(new GreenfootImage("images/build1.png"));
     }
     
     public void act()
