@@ -21,10 +21,36 @@ public class MyHouse1 extends World
         setBackground(new GreenfootImage("images/lobby1.jpg"));
         
         Boundary bound1 = new Boundary(200, 10);
-        addObject(bound1, 40, 400);
+        addObject(bound1, 20, 400);
         
         Boundary bound2 = new Boundary(200, 10);
-        addObject(bound2, 40, 400);
+        addObject(bound2, 280, 400);
+        
+        Boundary bound3 = new Boundary(30, 210);
+        addObject(bound3, 20, 210);
+        
+        Boundary bound4 = new Boundary(30, 210);
+        addObject(bound4, 300, 210);
+        
+        Boundary bound5 = new Boundary(10, 30);
+        addObject(bound5, 5, 340);
+        
+        Boundary bound6 = new Boundary(10, 30);
+        addObject(bound6, 340, 340);
+        
+        Boundary bound7 = new Boundary(120, 120);
+        addObject(bound7, 160, 160);
+        
+        Boundary bound8 = new Boundary(316, 20);
+        addObject(bound8, 150, 20);
+        
+        Boundary bound9 = new Boundary(10, 70);
+        addObject(bound9, 5, 60);
+        
+        Boundary bound10 = new Boundary(10, 70);
+        addObject(bound10, 310, 60);
+
+        
         
         
     }

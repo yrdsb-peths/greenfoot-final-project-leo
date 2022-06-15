@@ -89,7 +89,7 @@ public class MyWorld extends World
         this.addObject(portal, 455, 270); // center portal
         portal = new Portal(portal);
         center = new MyCenter(); // creates a different world
-        center.addObject(portal, 320, 440);
+        center.addObject(portal, 320, 420);
         
         portal = new Portal();
         this.addObject(portal, 70, 350); // building portal
