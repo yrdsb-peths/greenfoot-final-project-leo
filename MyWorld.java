@@ -191,8 +191,8 @@ public class MyWorld extends World
     
      public void spawnEgg()
     {
-        //int rand = Greenfoot.getRandomNumber(3);
-        int rand = 10;
+        int rand = Greenfoot.getRandomNumber(11);
+        
         
         if (rand == 0)
         {
@@ -216,10 +216,10 @@ public class MyWorld extends World
             
         }
         
-        if (rand == 3)
+        if (rand == 2)
         {
-            int x = 60 + Greenfoot.getRandomNumber(200);
-            int y = 120 + Greenfoot.getRandomNumber(40);
+            int x = 30 + Greenfoot.getRandomNumber(200);
+            int y = 80;
             
             Egg an = new Egg();
             house3.addObject(an, x, y);
@@ -228,7 +228,31 @@ public class MyWorld extends World
             
         }
         
+        if (rand == 3)
+        {
+            int x = 240 + Greenfoot.getRandomNumber(200);
+            int y = 270 + Greenfoot.getRandomNumber(90);
+            
+            Egg an = new Egg();
+            build.addObject(an, x, y);
+            
+            
+            
+        }
+        
         if (rand == 4)
+        {
+            int x = 260 + Greenfoot.getRandomNumber(215);
+            int y = 260 + Greenfoot.getRandomNumber(215);
+            
+            Egg an = new Egg();
+            house3.addObject(an, x, y);
+            
+            
+            
+        }
+        
+        if (rand == 5)
         {
             int x = 130 + Greenfoot.getRandomNumber(130);
             int y = 150 + Greenfoot.getRandomNumber(30);
@@ -240,7 +264,7 @@ public class MyWorld extends World
             
         }
         
-         if (rand == 5)
+         if (rand == 6)
         {
             int x = 130 + Greenfoot.getRandomNumber(130);
             int y = 150 + Greenfoot.getRandomNumber(30);
@@ -252,7 +276,7 @@ public class MyWorld extends World
             
         }
         
-         if (rand == 6)
+         if (rand == 7)
         {
             int x = 130 + Greenfoot.getRandomNumber(130);
             int y = 150 + Greenfoot.getRandomNumber(30);
@@ -264,7 +288,7 @@ public class MyWorld extends World
             
         }
         
-         if (rand == 7)
+         if (rand == 8)
         {
             int x = 110;
             int y = 230 + Greenfoot.getRandomNumber(30);
@@ -276,7 +300,7 @@ public class MyWorld extends World
             
         }
         
-         if (rand == 8)
+         if (rand == 9)
         {
             int x = 260 + Greenfoot.getRandomNumber(215);
             int y = 260 + Greenfoot.getRandomNumber(215);
@@ -288,7 +312,7 @@ public class MyWorld extends World
             
         }
         
-         if (rand == 9)
+         if (rand == 10)
         {
             int x = 260 + Greenfoot.getRandomNumber(115);
             int y = 210 + Greenfoot.getRandomNumber(40);
@@ -300,7 +324,7 @@ public class MyWorld extends World
             
         }
         
-         if (rand == 10)
+         if (rand == 11)
         {
             int x = 60 + Greenfoot.getRandomNumber(200);
             int y = 120 + Greenfoot.getRandomNumber(40);
