@@ -14,10 +14,10 @@ public class ThirdWorld extends World
      * 
      */
     
-    ThirdHouse1 third1;
-    ThirdRed third2;
-    ThirdBlue third3;
-    ThirdHouse2 third4;
+    static ThirdHouse1 third1;
+    static ThirdRed third2;
+    static ThirdBlue third3;
+    static ThirdHouse2 third4;
     
     public ThirdWorld()
     {    

@@ -10,7 +10,7 @@ public class Portal extends Actor
 {
     private Portal portal; 
     private boolean active; 
-    private GreenfootImage portalImage = new GreenfootImage ("images/tardis.png");
+    private GreenfootImage portalImage = new GreenfootImage ("images/baal2.png");
     
     
 

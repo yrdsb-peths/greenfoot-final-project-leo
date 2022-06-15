@@ -23,9 +23,9 @@ public class OtherWorld extends World
     
     
     
-    OtherHouse1 other1;
-    OtherHouse2 other2;
-    OtherHouse3 other3;
+    static OtherHouse1 other1;
+    static OtherHouse2 other2;
+    static OtherHouse3 other3;
     public OtherWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.

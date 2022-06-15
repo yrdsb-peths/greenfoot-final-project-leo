@@ -21,6 +21,17 @@ public class MyWorld extends World
     MyCenter center;
     MyBuilding build;
     
+    OtherHouse1 other1;
+    OtherHouse2 other2;
+    OtherHouse3 other3;
+    
+    ThirdHouse1 third1;
+    ThirdRed third2;
+    ThirdBlue third3;
+    ThirdHouse2 third4;
+    
+    
+    
     
     
     int time = Difficulty.timeValue;
@@ -180,24 +191,124 @@ public class MyWorld extends World
     
      public void spawnEgg()
     {
-        int rand = Greenfoot.getRandomNumber(100);
+        //int rand = Greenfoot.getRandomNumber(3);
+        int rand = 10;
         
-        if (rand <= 50)
+        if (rand == 0)
         {
-            int x = Greenfoot.getRandomNumber(100)+ 300;
-            int y = Greenfoot.getRandomNumber(100) + 200;
+            int x = 30 + Greenfoot.getRandomNumber(200);
+            int y = 80;
+            //MyHouse2 house2 = new MyHouse2(); // creates a different world
             
             Egg an = new Egg();
-            addObject(an, x, y);
+            house1.addObject(an, x, y);
         }
-        if (rand >= 49)
+        
+        if (rand == 1)
         {
-            int x = Greenfoot.getRandomNumber(100);
-            int y = Greenfoot.getRandomNumber(100);
+            int x = 30 + Greenfoot.getRandomNumber(200);
+            int y = 80;
             
             Egg an = new Egg();
-            // MyHouse1 house1 = new MyHouse1(); // creates a different world
-            house1.spawnEgg(x, y);
+            house2.addObject(an, x, y);
+            
+            
+            
+        }
+        
+        if (rand == 3)
+        {
+            int x = 60 + Greenfoot.getRandomNumber(200);
+            int y = 120 + Greenfoot.getRandomNumber(40);
+            
+            Egg an = new Egg();
+            house3.addObject(an, x, y);
+            
+            
+            
+        }
+        
+        if (rand == 4)
+        {
+            int x = 130 + Greenfoot.getRandomNumber(130);
+            int y = 150 + Greenfoot.getRandomNumber(30);
+            
+            Egg an = new Egg();
+            OtherWorld.other1.addObject(an, x, y);
+            
+            
+            
+        }
+        
+         if (rand == 5)
+        {
+            int x = 130 + Greenfoot.getRandomNumber(130);
+            int y = 150 + Greenfoot.getRandomNumber(30);
+            
+            Egg an = new Egg();
+            OtherWorld.other2.addObject(an, x, y);
+            
+            
+            
+        }
+        
+         if (rand == 6)
+        {
+            int x = 130 + Greenfoot.getRandomNumber(130);
+            int y = 150 + Greenfoot.getRandomNumber(30);
+            
+            Egg an = new Egg();
+            OtherWorld.other3.addObject(an, x, y);
+            
+            
+            
+        }
+        
+         if (rand == 7)
+        {
+            int x = 110;
+            int y = 230 + Greenfoot.getRandomNumber(30);
+            
+            Egg an = new Egg();
+            ThirdWorld.third1.addObject(an, x, y);
+            
+            
+            
+        }
+        
+         if (rand == 8)
+        {
+            int x = 260 + Greenfoot.getRandomNumber(215);
+            int y = 260 + Greenfoot.getRandomNumber(215);
+            
+            Egg an = new Egg();
+            ThirdWorld.third2.addObject(an, x, y);
+            
+            
+            
+        }
+        
+         if (rand == 9)
+        {
+            int x = 260 + Greenfoot.getRandomNumber(115);
+            int y = 210 + Greenfoot.getRandomNumber(40);
+            
+            Egg an = new Egg();
+            ThirdWorld.third3.addObject(an, x, y);
+            
+            
+            
+        }
+        
+         if (rand == 10)
+        {
+            int x = 60 + Greenfoot.getRandomNumber(200);
+            int y = 120 + Greenfoot.getRandomNumber(40);
+            
+            Egg an = new Egg();
+            ThirdWorld.third4.addObject(an, x, y);
+            
+            
             
         }
         

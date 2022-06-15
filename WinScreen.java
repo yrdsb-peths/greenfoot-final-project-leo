@@ -15,13 +15,13 @@ public class WinScreen extends World
      * 
      */
     
-    Label titleLabel = new Label("Return To Main Menu(Press <f>", 30);
+    Label titleLabel = new Label("Return To Main Menu(Press <f>)", 30);
 
     public WinScreen()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(500, 438, 1);
-        addObject(titleLabel, 200, 100);
+        addObject(titleLabel, 250, 350);
         setBackground(new GreenfootImage("images/win1.png"));
         MyWorld.music.stop();
         winTheme.setVolume(20);
