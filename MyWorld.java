@@ -65,7 +65,7 @@ public class MyWorld extends World
         this.addObject(portal, 335, 500); // Thirdworld portal
         portal = new Portal(portal);
         ThirdWorld world3 = new ThirdWorld(); // creates a different world
-        world3.addObject(portal, 700, 170);
+        world3.addObject(portal, 670, 170);
         
         portal = new Portal();
         this.addObject(portal, 152, 100); // house1 portal
