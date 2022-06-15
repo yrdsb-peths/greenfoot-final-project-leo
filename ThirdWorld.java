@@ -50,7 +50,7 @@ public class ThirdWorld extends World
         this.addObject(portal, 590, 290); // ThirdHouse3 portal
         portal = new Portal(portal);
         third4 = new ThirdHouse2(); // creates a different world
-        third4.addObject(portal, 195, 320);
+        third4.addObject(portal, 160, 220);
         
         Boundary bound1 = new Boundary(510, 150);
         addObject(bound1, 90, 10);
