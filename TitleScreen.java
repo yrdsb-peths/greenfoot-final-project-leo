@@ -13,7 +13,7 @@ public class TitleScreen extends World
     Label titleLabel3 = new Label("Press <e> For Instuctions", 30);
     Label titleLabel4 = new Label("By Leo Xu", 30);
     
-    static GreenfootSound mainTheme = new GreenfootSound("Genshin.mp3");
+    static GreenfootSound mainTheme = new GreenfootSound("sounds/Genshin.mp3");
     /**
      * Constructor for objects of class TitleScreen.
      * 
