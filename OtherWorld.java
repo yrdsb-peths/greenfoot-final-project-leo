@@ -14,7 +14,7 @@ public class OtherWorld extends World
      * 
      */
     
-    MyWorld my;
+    
     
     int time = Difficulty.timeValue;
     SimpleTimer timer = new SimpleTimer();
@@ -55,6 +55,64 @@ public class OtherWorld extends World
         portal = new Portal(portal);
         other3 = new OtherHouse3(); // creates a different world
         other3.addObject(portal, 270, 400);
+        
+        Boundary bound1 = new Boundary(500, 100);
+        addObject(bound1, 420, 55);
+        
+        Boundary bound2 = new Boundary(50, 100);
+        addObject(bound2, 650, 150);
+        
+        Boundary bound3 = new Boundary(230, 200);
+        addObject(bound3, 35, 35);
+        
+        Boundary bound4 = new Boundary(5, 50);
+        addObject(bound4, 2, 160);
+        
+        Boundary bound5 = new Boundary(50, 220);
+        addObject(bound5, 20, 290);
+        
+        Boundary bound6 = new Boundary(150, 150);
+        addObject(bound6, 135, 310);
+        
+        Boundary bound7 = new Boundary(1000, 1);
+        addObject(bound7, 330, 636);
+        
+        Boundary bound8 = new Boundary(10, 1000);
+        addObject(bound8, 2, 500);
+        
+        Boundary bound9 = new Boundary(50, 150);
+        addObject(bound9, 460, 440);
+        
+        Boundary bound10 = new Boundary(75, 150);
+        addObject(bound10, 640, 550);
+        
+        Boundary bound11 = new Boundary(100, 40);
+        addObject(bound11, 590, 610);
+        
+        Boundary bound12 = new Boundary(50, 50);
+        addObject(bound12, 480, 500);
+        
+        Boundary bound13 = new Boundary(135, 75);
+        addObject(bound13, 140, 490);
+        
+        Boundary bound14 = new Boundary(170, 110);
+        addObject(bound14, 350, 510);
+        
+        Boundary bound15 = new Boundary(100, 20);
+        addObject(bound15, 240, 550);
+        
+        Boundary bound16 = new Boundary(80, 230);
+        addObject(bound16, 340, 280);
+        
+        Boundary bound17 = new Boundary(190, 20);
+        addObject(bound17, 570, 370);
+        
+        Boundary bound18 = new Boundary(80, 220);
+        addObject(bound18, 650, 390);
+        
+        
+        
+        
         
     }
     
