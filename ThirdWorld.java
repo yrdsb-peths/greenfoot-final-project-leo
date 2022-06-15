@@ -72,6 +72,9 @@ public class ThirdWorld extends World
         
         Boundary bound7 = new Boundary(100, 25);
         addObject(bound7, 380, 240);
+        
+        Boundary bound8 = new Boundary(50, 25);
+        addObject(bound8, 600, 240);
     }
     
     public void act()
