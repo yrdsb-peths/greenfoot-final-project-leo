@@ -13,11 +13,17 @@ public class ThirdHouse1 extends World
      * Constructor for objects of class ThirdHouse1.
      * 
      */
+    
+    SimpleTimer timer = new SimpleTimer();
+    //label in my world
+    Label timeLabel = new Label("", 30);
     public ThirdHouse1()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(400, 292, 1); 
         setBackground(new GreenfootImage("images/ThirdHouse1.png"));
+        
+        addObject(timeLabel, 270, 40);
         
         Boundary bound1 = new Boundary(150, 10);
         addObject(bound1, 70, 270);
@@ -41,6 +47,23 @@ public class ThirdHouse1 extends World
         {
             showText(String.valueOf(m.getX()), 200, 200);
             showText(String.valueOf(m.getY()), 300, 200);
+        }
+        
+        if(timer.millisElapsed() >= 1000)
+        {
+            timer.mark();
+            TimeKeeper.Updatetime();
+            timeLabel.setValue("time left: " + TimeKeeper.timeleft);
+                        
+        }
+        
+        
+        if (TimeKeeper.timeleft == 0)
+        {
+            LoseScreen gameWorld = new LoseScreen();
+            Greenfoot.setWorld(gameWorld);
+            MyWorld.music.stop();
+            
         }
 
 

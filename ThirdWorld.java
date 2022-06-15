@@ -19,11 +19,17 @@ public class ThirdWorld extends World
     static ThirdBlue third3;
     static ThirdHouse2 third4;
     
+    SimpleTimer timer = new SimpleTimer();
+    //label in my world
+    Label timeLabel = new Label("", 60);
+    
     public ThirdWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 400, 1); 
         setBackground(new GreenfootImage("images/town3.png"));
+        
+        addObject(timeLabel, 350, 30);
         
         Portal portal = new Portal();
         this.addObject(portal, 5011, 16011);
@@ -85,6 +91,24 @@ public class ThirdWorld extends World
             showText(String.valueOf(m.getX()), 200, 200);
             showText(String.valueOf(m.getY()), 300, 200);
         }
+        
+        if(timer.millisElapsed() >= 1000)
+        {
+            timer.mark();
+            TimeKeeper.Updatetime();
+            timeLabel.setValue("time left: " + TimeKeeper.timeleft);
+                        
+        }
+        
+        
+        if (TimeKeeper.timeleft == 0)
+        {
+            LoseScreen gameWorld = new LoseScreen();
+            Greenfoot.setWorld(gameWorld);
+            MyWorld.music.stop();
+            
+        }
+
 
 
     }

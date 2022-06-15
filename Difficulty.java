@@ -48,7 +48,7 @@ public class Difficulty extends World
         
         if(Greenfoot.isKeyDown("1"))
         {
-            timeValue = 5;
+            timeValue = 30;
             MyWorld gameWorld = new MyWorld();
             Greenfoot.setWorld(gameWorld);
             TitleScreen.mainTheme.stop();

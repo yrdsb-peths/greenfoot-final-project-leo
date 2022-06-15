@@ -34,10 +34,12 @@ public class MyWorld extends World
     
     
     
-    int time = Difficulty.timeValue;
+    //int time = Difficulty.timeValue;
     SimpleTimer timer = new SimpleTimer();
     //label in my world
     Label timeLabel = new Label("", 60);
+    
+    TimeKeeper keeper = new TimeKeeper();
     
     
     
@@ -50,7 +52,7 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(578, 530, 1); 
         setBackground(new GreenfootImage("images/accumula.png"));
-        addObject(timeLabel, 300, 300);
+        addObject(timeLabel, 270, 50);
         
         
         music.setVolume(25);
@@ -351,13 +353,11 @@ public class MyWorld extends World
         if(timer.millisElapsed() >= 1000)
         {
             timer.mark();
-            time--;
-            timeLabel.setValue("time left: " + time);
-            
-            
+            TimeKeeper.Updatetime();
+            timeLabel.setValue("time left: " + TimeKeeper.timeleft);           
         }
         
-        if (time == 0)
+        if (TimeKeeper.timeleft == 0)
         {
             LoseScreen gameWorld = new LoseScreen();
             Greenfoot.setWorld(gameWorld);

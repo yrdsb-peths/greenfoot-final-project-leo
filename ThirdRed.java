@@ -13,11 +13,17 @@ public class ThirdRed extends World
      * Constructor for objects of class ThirdRed.
      * 
      */
+    
+    SimpleTimer timer = new SimpleTimer();
+    //label in my world
+    Label timeLabel = new Label("", 60);
     public ThirdRed()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 608, 1); 
         setBackground(new GreenfootImage("images/ThirdHouse3.png"));
+        
+        addObject(timeLabel, 400, 100);
         
         Boundary bound1 = new Boundary(10, 550);
         addObject(bound1, 120, 250);
@@ -57,6 +63,9 @@ public class ThirdRed extends World
         
         Boundary bound13 = new Boundary(100, 40);
         addObject(bound13, 560, 300);
+        
+        Boundary bound14 = new Boundary(200, 40);
+        addObject(bound14, 320, 140);
 
     }
     
@@ -67,6 +76,23 @@ public class ThirdRed extends World
         {
             showText(String.valueOf(m.getX()), 200, 200);
             showText(String.valueOf(m.getY()), 300, 200);
+        }
+        
+        if(timer.millisElapsed() >= 1000)
+        {
+            timer.mark();
+            TimeKeeper.Updatetime();
+            timeLabel.setValue("time left: " + TimeKeeper.timeleft);
+                        
+        }
+        
+        
+        if (TimeKeeper.timeleft == 0)
+        {
+            LoseScreen gameWorld = new LoseScreen();
+            Greenfoot.setWorld(gameWorld);
+            MyWorld.music.stop();
+            
         }
 
 

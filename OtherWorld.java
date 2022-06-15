@@ -16,7 +16,7 @@ public class OtherWorld extends World
     
     
     
-    int time = Difficulty.timeValue;
+    //int time = Difficulty.timeValue;
     SimpleTimer timer = new SimpleTimer();
     //label in my world
     Label timeLabel = new Label("", 60);
@@ -32,7 +32,7 @@ public class OtherWorld extends World
         super(688, 636, 1); 
         setBackground(new GreenfootImage("images/town2.png"));
         
-        addObject(timeLabel, 300, 300);// add time label
+        addObject(timeLabel, 350, 80);// add time label
         
         
         Portal portal = new Portal();
@@ -128,13 +128,13 @@ public class OtherWorld extends World
         if(timer.millisElapsed() >= 1000)
         {
             timer.mark();
-            time--;
-            timeLabel.setValue("time left: " + time);
+            TimeKeeper.Updatetime();
+            timeLabel.setValue("time left: " + TimeKeeper.timeleft);
                         
         }
         
         
-        if (time == 0)
+        if (TimeKeeper.timeleft == 0)
         {
             LoseScreen gameWorld = new LoseScreen();
             Greenfoot.setWorld(gameWorld);

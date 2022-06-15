@@ -13,11 +13,17 @@ public class MyCenter extends World
      * Constructor for objects of class MyCenter.
      * 
      */
+    
+    SimpleTimer timer = new SimpleTimer();
+    //label in my world
+    Label timeLabel = new Label("", 30);
     public MyCenter()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(645, 450, 1); 
         setBackground(new GreenfootImage("images/pokeCenter.png"));
+        
+        addObject(timeLabel, 320, 60);
         
         Boundary bound1 = new Boundary(275, 100);
         addObject(bound1, 325, 115);
@@ -54,6 +60,23 @@ public class MyCenter extends World
         {
             showText(String.valueOf(m.getX()), 200, 200);
             showText(String.valueOf(m.getY()), 300, 200);
+        }
+        
+        if(timer.millisElapsed() >= 1000)
+        {
+            timer.mark();
+            TimeKeeper.Updatetime();
+            timeLabel.setValue("time left: " + TimeKeeper.timeleft);
+                        
+        }
+        
+        
+        if (TimeKeeper.timeleft == 0)
+        {
+            LoseScreen gameWorld = new LoseScreen();
+            Greenfoot.setWorld(gameWorld);
+            MyWorld.music.stop();
+            
         }
 
 
