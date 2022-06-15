@@ -134,6 +134,13 @@ public class OtherWorld extends World
         }
         
         
+        if (time == 0)
+        {
+            LoseScreen gameWorld = new LoseScreen();
+            Greenfoot.setWorld(gameWorld);
+            MyWorld.music.stop();
+            
+        }
 
 
     }
