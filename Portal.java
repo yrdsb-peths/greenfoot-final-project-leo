@@ -3,8 +3,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Portal here.
  * 
- * Leo Xu
  * This Portal Actor allows player to ravel across different worlds
+ * 
+ * Leo Xu
+ * June 15 2022
+ * 
  */
 public class Portal extends Actor
 {
@@ -12,15 +15,12 @@ public class Portal extends Actor
     private boolean active; //used if this portal can be used
     private GreenfootImage portalImage = new GreenfootImage ("images/baal2.png");
     
-    
-
     public Portal()
     {
         portalImage.scale(25, 25);
         setImage(portalImage);
     }
     
-   
     public Portal(Portal portal)
     {
         this.setPortal(portal); 
@@ -29,18 +29,15 @@ public class Portal extends Actor
         setImage(portalImage);
     }
     
-
     private void setPortal(Portal portal)
     {
         this.portal = portal; 
     }
     
- 
     public Portal getPortal()
     {
         return this.portal; 
     }
-    
     
     public void act()
     {

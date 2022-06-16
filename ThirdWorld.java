@@ -8,56 +8,51 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ThirdWorld extends World
 {
-
-    /**
-     * Constructor for objects of class ThirdWorld.
-     * 
-     */
-    
+    //world instances
     static ThirdHouse1 third1;
     static ThirdRed third2;
     static ThirdBlue third3;
     static ThirdHouse2 third4;
     
     SimpleTimer timer = new SimpleTimer();
-    //label in my world
     Label timeLabel = new Label("", 60);
     
     public ThirdWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 700x400 cells with a cell size of 1x1 pixels.
         super(700, 400, 1); 
         setBackground(new GreenfootImage("images/town3.png"));
         
         addObject(timeLabel, 350, 30);
         
-        Portal portal = new Portal();
-        this.addObject(portal, 5011, 16011);
+        Portal portal = new Portal();//main portal that allows portals to other worlds work
+        this.addObject(portal, 9999, 9999);
         
-        portal = new Portal();
-        this.addObject(portal, 360, 280); // ThirdHouse1 portal
+        portal = new Portal();// ThirdHouse1 portal
+        this.addObject(portal, 360, 280); 
         portal = new Portal(portal);
-        third1 = new ThirdHouse1(); // creates a different world
+        third1 = new ThirdHouse1(); 
         third1.addObject(portal, 180, 270);
         
-        portal = new Portal();
-        this.addObject(portal, 270, 110); // ThirdHouse2 portal
+        portal = new Portal();// ThirdHouse2 portal
+        this.addObject(portal, 270, 110);
         portal = new Portal(portal);
-        third2 = new ThirdRed(); // creates a different world
+        third2 = new ThirdRed();
         third2.addObject(portal, 270, 560);
         
-        portal = new Portal();
-        this.addObject(portal, 500, 90); // ThirdHouse3 portal
+        portal = new Portal();// ThirdHouse3 portal
+        this.addObject(portal, 500, 90);
         portal = new Portal(portal);
-        third3 = new ThirdBlue(); // creates a different world
+        third3 = new ThirdBlue(); 
         third3.addObject(portal, 280, 450);
         
-        portal = new Portal();
-        this.addObject(portal, 590, 290); // ThirdHouse3 portal
+        portal = new Portal();// ThirdHouse3 portal
+        this.addObject(portal, 590, 290); 
         portal = new Portal(portal);
-        third4 = new ThirdHouse2(); // creates a different world
+        third4 = new ThirdHouse2(); 
         third4.addObject(portal, 160, 220);
         
+        //boundaries for ThirdWorld
         Boundary bound1 = new Boundary(510, 150);
         addObject(bound1, 90, 10);
         
@@ -85,31 +80,17 @@ public class ThirdWorld extends World
     
     public void act()
     {
-         MouseInfo m = Greenfoot.getMouseInfo();
-        if (m != null)
-        {
-            showText(String.valueOf(m.getX()), 200, 200);
-            showText(String.valueOf(m.getY()), 300, 200);
-        }
-        
-        if(timer.millisElapsed() >= 1000)
+        if(timer.millisElapsed() >= 1000)//TimeKeeper tracks the time
         {
             timer.mark();
             TimeKeeper.Updatetime();
-            timeLabel.setValue("time left: " + TimeKeeper.timeleft);
-                        
+            timeLabel.setValue("time left: " + TimeKeeper.timeleft);       
         }
-        
-        
-        if (TimeKeeper.timeleft == 0)
+        if (TimeKeeper.timeleft == 0)//TimeKeeper tracks the time
         {
             LoseScreen gameWorld = new LoseScreen();
             Greenfoot.setWorld(gameWorld);
-            MyWorld.music.stop();
-            
+            MyWorld.music.stop();//stops the gameplay music
         }
-
-
-
     }
 }

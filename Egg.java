@@ -3,8 +3,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Egg here.
  * 
- * Leo Xu
  * Objective of the game
+ * 
+ * Leo Xu
+ * June 15 2022
+ * 
  */
 public class Egg extends Actor
 {

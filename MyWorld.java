@@ -5,116 +5,96 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class MyWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * The main world when you start the game.
+ * Has portals leading to MyHouse1, MyHouse2, MyHouse3, MyCenter, and MyBuilding.
+ * Has the randomizer that generates the Egg across different worlds.
+ * 
+ * Leo Xu
+ * June 15 2022 
+ * 
  */
 public class MyWorld extends World
 {
-
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
+    //World instances
     MyHouse1 house1;
     MyHouse2 house2;
     MyHouse3 house3;
     MyCenter center;
     MyBuilding build;
-    
     OtherHouse1 other1;
     OtherHouse2 other2;
     OtherHouse3 other3;
-    
     ThirdHouse1 third1;
     ThirdRed third2;
     ThirdBlue third3;
     ThirdHouse2 third4;
     
-    
-    
-    
-    
-    //int time = Difficulty.timeValue;
+    //Simple Timer
     SimpleTimer timer = new SimpleTimer();
-    //label in my world
     Label timeLabel = new Label("", 60);
-    
     TimeKeeper keeper = new TimeKeeper();
-    
-    
-    
-    
-    static GreenfootSound music = new GreenfootSound("accumula town.mp3");
-    
-    
+
+    static GreenfootSound music = new GreenfootSound("accumula town.mp3");//gameplay music
     public MyWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 578x530 cells with a cell size of 1x1 pixels.
         super(578, 530, 1); 
         setBackground(new GreenfootImage("images/accumula.png"));
-        addObject(timeLabel, 270, 50);
-        
+        addObject(timeLabel, 270, 50);//time label
         
         music.setVolume(25);
         music.play();
         
-        
-        
+        //main portal that allows portals to other worlds work
         Portal portal = new Portal();
-        this.addObject(portal, 5011, 16011);
-        
+        this.addObject(portal, 9999, 9999);
         portal = new Portal(portal);
-        this.addObject(portal, 35011, 45011);
+        this.addObject(portal, 9999, 9999);
         
-        
-        portal = new Portal();
-        this.addObject(portal, 50, 160); // Otherworld portal
+        portal = new Portal();// OtherWorld portal
+        this.addObject(portal, 50, 160); 
         portal = new Portal(portal);
-        OtherWorld world2 = new OtherWorld(); // creates a different world
+        OtherWorld world2 = new OtherWorld(); 
         world2.addObject(portal, 650, 230);
         
         
-        portal = new Portal();
-        this.addObject(portal, 335, 500); // Thirdworld portal
+        portal = new Portal();// ThirdWorld portal
+        this.addObject(portal, 335, 500);
         portal = new Portal(portal);
-        ThirdWorld world3 = new ThirdWorld(); // creates a different world
+        ThirdWorld world3 = new ThirdWorld();
         world3.addObject(portal, 670, 170);
         
-        portal = new Portal();
-        this.addObject(portal, 152, 100); // house1 portal
+        portal = new Portal();// MyHouse1 portal
+        this.addObject(portal, 152, 100); 
         portal = new Portal(portal);
-        house1 = new MyHouse1(); // creates a different world
+        house1 = new MyHouse1(); 
         house1.addObject(portal, 150, 350);
         
-        portal = new Portal();
-        this.addObject(portal, 300, 100); // house2 portal
+        portal = new Portal(); // MyHouse2 portal
+        this.addObject(portal, 300, 100); 
         portal = new Portal(portal);
-        house2 = new MyHouse2(); // creates a different world
+        house2 = new MyHouse2(); 
         house2.addObject(portal, 150, 350);
         
-        portal = new Portal();
-        this.addObject(portal, 440, 130); // house3 portal
+        portal = new Portal(); // MyHouse3 portal
+        this.addObject(portal, 440, 130); 
         portal = new Portal(portal);
-        house3 = new MyHouse3(); // creates a different world
+        house3 = new MyHouse3(); 
         house3.addObject(portal, 160, 220);
         
-        portal = new Portal();
-        this.addObject(portal, 455, 270); // center portal
+        portal = new Portal(); // MyCenter portal
+        this.addObject(portal, 455, 270); 
         portal = new Portal(portal);
-        center = new MyCenter(); // creates a different world
+        center = new MyCenter(); 
         center.addObject(portal, 320, 420);
         
-        portal = new Portal();
-        this.addObject(portal, 70, 350); // building portal
+        portal = new Portal(); // MyBuilding portal
+        this.addObject(portal, 70, 350);
         portal = new Portal(portal);
-        build = new MyBuilding(); // creates a different world
+        build = new MyBuilding();
         build.addObject(portal, 580, 420);
         
-        
-
-
-
-        
+        //Boundaries for MyWorld
         Boundary bound1 = new Boundary(300, 10);
         addObject(bound1, 125, 470);
         
@@ -142,8 +122,8 @@ public class MyWorld extends World
         Boundary bound9 = new Boundary(50, 50);
         addObject(bound9, 235, 75);
         
-        Boundary bound10 = new Boundary(90, 80);
-        addObject(bound10, 445, 200);
+        Boundary bound10 = new Boundary(90, 60);
+        addObject(bound10, 445, 210);
         
         Boundary bound11 = new Boundary(210, 10);
         addObject(bound11, 215, 65);
@@ -174,38 +154,27 @@ public class MyWorld extends World
         
         Boundary bound20 = new Boundary(150, 5);
         addObject(bound20, 330, 530);
-                
-        
-               
-        
-                
         
         
-        
-        
-        MainCharater main = new MainCharater();
+        MainCharater main = new MainCharater();//spawn MainCharater
         addObject(main, 200, 200);
         
         spawnEgg();
-        
-
     }
     
-     public void spawnEgg()
+     public void spawnEgg()//get a random number from 0-11 and the number determines where the Egg spawns in one of the worlds house/building class
     {
-        int rand = Greenfoot.getRandomNumber(11);
-        
-        
+        //int rand = Greenfoot.getRandomNumber(11);
+        int rand = 0;
+
         if (rand == 0)
         {
             int x = 30 + Greenfoot.getRandomNumber(200);
             int y = 80;
-            //MyHouse2 house2 = new MyHouse2(); // creates a different world
-            
+
             Egg an = new Egg();
             house1.addObject(an, x, y);
         }
-        
         if (rand == 1)
         {
             int x = 30 + Greenfoot.getRandomNumber(200);
@@ -213,11 +182,7 @@ public class MyWorld extends World
             
             Egg an = new Egg();
             house2.addObject(an, x, y);
-            
-            
-            
         }
-        
         if (rand == 2)
         {
             int x = 30 + Greenfoot.getRandomNumber(200);
@@ -225,11 +190,7 @@ public class MyWorld extends World
             
             Egg an = new Egg();
             house3.addObject(an, x, y);
-            
-            
-            
         }
-        
         if (rand == 3)
         {
             int x = 240 + Greenfoot.getRandomNumber(200);
@@ -237,11 +198,7 @@ public class MyWorld extends World
             
             Egg an = new Egg();
             build.addObject(an, x, y);
-            
-            
-            
         }
-        
         if (rand == 4)
         {
             int x = 260 + Greenfoot.getRandomNumber(215);
@@ -249,11 +206,7 @@ public class MyWorld extends World
             
             Egg an = new Egg();
             house3.addObject(an, x, y);
-            
-            
-            
         }
-        
         if (rand == 5)
         {
             int x = 130 + Greenfoot.getRandomNumber(130);
@@ -261,11 +214,7 @@ public class MyWorld extends World
             
             Egg an = new Egg();
             OtherWorld.other1.addObject(an, x, y);
-            
-            
-            
         }
-        
          if (rand == 6)
         {
             int x = 130 + Greenfoot.getRandomNumber(130);
@@ -273,11 +222,7 @@ public class MyWorld extends World
             
             Egg an = new Egg();
             OtherWorld.other2.addObject(an, x, y);
-            
-            
-            
         }
-        
          if (rand == 7)
         {
             int x = 130 + Greenfoot.getRandomNumber(130);
@@ -285,11 +230,7 @@ public class MyWorld extends World
             
             Egg an = new Egg();
             OtherWorld.other3.addObject(an, x, y);
-            
-            
-            
         }
-        
          if (rand == 8)
         {
             int x = 110;
@@ -297,11 +238,7 @@ public class MyWorld extends World
             
             Egg an = new Egg();
             ThirdWorld.third1.addObject(an, x, y);
-            
-            
-            
         }
-        
          if (rand == 9)
         {
             int x = 260 + Greenfoot.getRandomNumber(215);
@@ -309,11 +246,7 @@ public class MyWorld extends World
             
             Egg an = new Egg();
             ThirdWorld.third2.addObject(an, x, y);
-            
-            
-            
         }
-        
          if (rand == 10)
         {
             int x = 260 + Greenfoot.getRandomNumber(115);
@@ -321,11 +254,7 @@ public class MyWorld extends World
             
             Egg an = new Egg();
             ThirdWorld.third3.addObject(an, x, y);
-            
-            
-            
         }
-        
          if (rand == 11)
         {
             int x = 60 + Greenfoot.getRandomNumber(200);
@@ -333,49 +262,22 @@ public class MyWorld extends World
             
             Egg an = new Egg();
             ThirdWorld.third4.addObject(an, x, y);
-            
-            
-            
         }
-        
-        
     }
     
     public void act()
     {
-         MouseInfo m = Greenfoot.getMouseInfo();
-        if (m != null)
-        {
-            showText(String.valueOf(m.getX()), 200, 200);
-            showText(String.valueOf(m.getY()), 300, 200);
-        }
-        
-        if(timer.millisElapsed() >= 1000)
+        if(timer.millisElapsed() >= 1000)//TimeKeeper tracks the time
         {
             timer.mark();
             TimeKeeper.Updatetime();
-            timeLabel.setValue("time left: " + TimeKeeper.timeleft);           
+            timeLabel.setValue("time left: " + TimeKeeper.timeleft);//display time left          
         }
-        
-        if (TimeKeeper.timeleft == 0)
+        if (TimeKeeper.timeleft == 0)//if the time reaches 0, go to LoseScreen
         {
             LoseScreen gameWorld = new LoseScreen();
             Greenfoot.setWorld(gameWorld);
-            music.stop();
-            
+            music.stop();//stops the gameplay music
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
-
     }
-    
-    
 }

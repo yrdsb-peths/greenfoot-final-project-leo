@@ -3,59 +3,53 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class OtherWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Another world that can be accessed from the portal of MyWorld
+ * Has portals leading to OtherHouse1, OtherHouse2, OtherHouse3
+ * 
+ * Leo Xu
+ * June 15 2022
  */
 public class OtherWorld extends World
 {
-
-    /**
-     * Constructor for objects of class OtherWorld.
-     * 
-     */
-    
-    
-    
-    //int time = Difficulty.timeValue;
     SimpleTimer timer = new SimpleTimer();
-    //label in my world
     Label timeLabel = new Label("", 60);
     
-    
-    
+    //World instances
     static OtherHouse1 other1;
     static OtherHouse2 other2;
     static OtherHouse3 other3;
+    
     public OtherWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 688x636 cells with a cell size of 1x1 pixels.
         super(688, 636, 1); 
         setBackground(new GreenfootImage("images/town2.png"));
         
         addObject(timeLabel, 350, 80);// add time label
         
-        
+        //main portal that allows portals to other worlds work
         Portal portal = new Portal();
-        this.addObject(portal, 5011, 16011);
+        this.addObject(portal, 9999, 9999);
         
-        portal = new Portal();
-        this.addObject(portal, 100, 160); // otherHouse1 portal
+        portal = new Portal(); // OtherHouse1 portal
+        this.addObject(portal, 100, 160);
         portal = new Portal(portal);
-        other1 = new OtherHouse1(); // creates a different world
+        other1 = new OtherHouse1();
         other1.addObject(portal, 270, 400);
         
-        portal = new Portal();
-        this.addObject(portal, 140, 550); // otherHous2 portal
+        portal = new Portal();// OtherHous2 portal
+        this.addObject(portal, 140, 550); 
         portal = new Portal(portal);
-        other2 = new OtherHouse2(); // creates a different world
+        other2 = new OtherHouse2(); 
         other2.addObject(portal, 270, 400);
     
-        portal = new Portal();
-        this.addObject(portal, 550, 420); // otherHouse3 portal
+        portal = new Portal();// OtherHouse3 portal
+        this.addObject(portal, 550, 420);
         portal = new Portal(portal);
-        other3 = new OtherHouse3(); // creates a different world
+        other3 = new OtherHouse3(); 
         other3.addObject(portal, 270, 400);
         
+        //boundaries for OtherWorld
         Boundary bound1 = new Boundary(500, 100);
         addObject(bound1, 420, 55);
         
@@ -109,43 +103,21 @@ public class OtherWorld extends World
         
         Boundary bound18 = new Boundary(80, 220);
         addObject(bound18, 650, 390);
-        
-        
-        
-        
-        
     }
     
     public void act()
     {
-         MouseInfo m = Greenfoot.getMouseInfo();
-        if (m != null)
-        {
-            showText(String.valueOf(m.getX()), 200, 200);
-            showText(String.valueOf(m.getY()), 300, 200);
-        }
-        
-        if(timer.millisElapsed() >= 1000)
+        if(timer.millisElapsed() >= 1000)//TimeKeeper tracks the time
         {
             timer.mark();
             TimeKeeper.Updatetime();
-            timeLabel.setValue("time left: " + TimeKeeper.timeleft);
-                        
+            timeLabel.setValue("time left: " + TimeKeeper.timeleft);         
         }
-        
-        
-        if (TimeKeeper.timeleft == 0)
+        if (TimeKeeper.timeleft == 0)//TimeKeeper tracks the time
         {
             LoseScreen gameWorld = new LoseScreen();
             Greenfoot.setWorld(gameWorld);
-            MyWorld.music.stop();
-            
+            MyWorld.music.stop();//stops the gameplay music
         }
-
-
     }
-    
-    
-    
-    
 }

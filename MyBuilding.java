@@ -3,29 +3,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class MyBuilding here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * building for the Egg to spawn in
+ * 
+ * Leo Xu
+ * June 15 2022
  */
 public class MyBuilding extends World
 {
-
-    /**
-     * Constructor for objects of class MyBuilding.
-     * 
-     */
-    
     SimpleTimer timer = new SimpleTimer();
-    //label in my world
     Label timeLabel = new Label("", 30);
+    
     public MyBuilding()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 640x480 cells with a cell size of 1x1 pixels.
         super(640, 480, 1); 
         setBackground(new GreenfootImage("images/build1.png"));
         
         addObject(timeLabel, 270, 140);
         
-        
+        //boundaries for MyBuilding
         Boundary bound1 = new Boundary(25, 300);
         addObject(bound1, 580, 190);
         
@@ -71,30 +67,17 @@ public class MyBuilding extends World
     
     public void act()
     {
-         MouseInfo m = Greenfoot.getMouseInfo();
-        if (m != null)
-        {
-            showText(String.valueOf(m.getX()), 200, 200);
-            showText(String.valueOf(m.getY()), 300, 200);
-        }
-        
-        if(timer.millisElapsed() >= 1000)
+        if(timer.millisElapsed() >= 1000)//TimeKeeper tracks the time
         {
             timer.mark();
             TimeKeeper.Updatetime();
             timeLabel.setValue("time left: " + TimeKeeper.timeleft);
-                        
         }
-        
-        
-        if (TimeKeeper.timeleft == 0)
+        if (TimeKeeper.timeleft == 0)//if the time reaches 0, go to LoseScreen
         {
             LoseScreen gameWorld = new LoseScreen();
             Greenfoot.setWorld(gameWorld);
-            MyWorld.music.stop();
-            
+            MyWorld.music.stop();//stops the gameplay music
         }
-
-
     }
 }

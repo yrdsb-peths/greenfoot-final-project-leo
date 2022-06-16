@@ -3,8 +3,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Elephant here.
  * 
- * Leo Xu
  * The playable charater that allows you to interect the world
+ * 
+ * Leo Xu
+ * 
+ * June 15 2022
+ * 
  */
 public class MainCharater extends Actor
 {
@@ -14,16 +18,15 @@ public class MainCharater extends Actor
     private GreenfootImage[] rightImages;
     private GreenfootImage[] leftImages;
     
-    
+    //animation image speed
     private SimpleTimer actionTimer;
     private int delay = 0;
     private boolean isFacingRight = true;
     private boolean isFacingUp = true;
-    int size = 50;//quick way to adjust all the MainCharater's image sizes.
-    int CharaterSpeed = 2;
     
-   
-    
+    int size = 50;//quick way to adjust all the MainCharater's image sizes
+    int CharaterSpeed = 3;//quick way to adjust all the MainCharater's speed
+    int SprintSpeed = 10;//quick way to adjust all the MainCharater's sprint speed
     
     public MainCharater()
     {
@@ -54,7 +57,7 @@ public class MainCharater extends Actor
              leftImages[i].scale(size, size);
         }
         setImage(rightImages[0]);
-        
+
         actionTimer = new SimpleTimer();
         actionTimer.mark();
     }
@@ -99,7 +102,6 @@ public class MainCharater extends Actor
         }
     }
     
-    
     public void act()
     {
         if(Greenfoot.isKeyDown("d"))//MainCharater moves right
@@ -108,10 +110,10 @@ public class MainCharater extends Actor
             move(CharaterSpeed);
             idleAction();
             
-            if(Greenfoot.isKeyDown("c"))//MainCharater moves right faster
+            if(Greenfoot.isKeyDown("c"))//MainCharater sprints right
             {
                 isFacingRight = true;
-                move(5);
+                move(SprintSpeed);
             }
         }
         
@@ -121,10 +123,10 @@ public class MainCharater extends Actor
             move(-CharaterSpeed);
             idleAction();
             
-            if(Greenfoot.isKeyDown("c"))//MainCharater moves left faster
+            if(Greenfoot.isKeyDown("c"))//MainCharater sprints left
             {
                  isFacingRight = false;
-                move(-5);
+                move(-SprintSpeed);
             }
         }
         
@@ -137,15 +139,11 @@ public class MainCharater extends Actor
             isFacingUp = true;
             idleActionTwo();
             
-            
-            if(Greenfoot.isKeyDown("c"))//MainCharater moves up faster
+            if(Greenfoot.isKeyDown("c"))//MainCharater sprints up
             {
                 
-                setLocation(x, y -5);   
+                setLocation(x, y -SprintSpeed);   
             }
-            
-             
-
         }
         
         if(Greenfoot.isKeyDown("s")) //MainCharater moves down
@@ -156,17 +154,15 @@ public class MainCharater extends Actor
             isFacingUp = false;
             idleActionTwo();
             
-              if(Greenfoot.isKeyDown("c"))//MainCharater moves down faster
+              if(Greenfoot.isKeyDown("c"))//MainCharater sprints down
             {
                 
-                setLocation(x, y + 5);   
+                setLocation(x, y + SprintSpeed);   
             }
         }
         win();
-       
     }
     
-       
     public void setLocation(int x, int y)//When MainCharater touches Boundary, it stops MainCharater from moving further
     {
         int oldX = getX();
@@ -183,18 +179,8 @@ public class MainCharater extends Actor
         if(isTouching(Egg.class))
         {
             removeTouching(Egg.class);
-            //Greenfoot.playSound("sounds/smw_coin.wav");
-
             WinScreen gameWorld = new WinScreen();
             Greenfoot.setWorld(gameWorld);
-            
-            
-            
         }
     }
-    
-    
- 
-    
-
 }

@@ -3,17 +3,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Difficulty here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * This is world allows you to choose the time limit as difficulty
+ * 
+ * Leo Xu
+ * June 15 2022
  */
 public class Difficulty extends World
 {
-
-    /**
-     * Constructor for objects of class Difficulty.
-     * 
-     */
-    
     Label titleLabel = new Label("Choose Time Limit Difficulty, Then Game Will Start", 30);
     Label titleLabel2 = new Label("Press <f> To Go Back", 30);
     Label titleLabel3 = new Label("30 Seconds (Press <1>)", 30);
@@ -21,12 +17,10 @@ public class Difficulty extends World
     Label titleLabel5 = new Label("2 Minutes (Press <3>)", 30);
     Label titleLabel6 = new Label("3 Minutes (Press <4>)", 30);
     
-    //SimpleTimer time2 = new SimpleTimer();
-    
-    public static int timeValue;
+    public static int timeValue;//stores the time as seconds
     public Difficulty()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 1050x540 cells with a cell size of 1x1 pixels.
         super(1050, 540, 1); 
         setBackground(new GreenfootImage("images/diff1.png"));
         
@@ -40,46 +34,38 @@ public class Difficulty extends World
     
     public void act()
     {
-        if(Greenfoot.isKeyDown("f"))
+        if(Greenfoot.isKeyDown("f"))//go back button
         {
             TitleScreen gameWorld = new TitleScreen();
             Greenfoot.setWorld(gameWorld);
         }
-        
-        if(Greenfoot.isKeyDown("1"))
+        if(Greenfoot.isKeyDown("1"))//30 seconds as the time limit
         {
             timeValue = 30;
             MyWorld gameWorld = new MyWorld();
             Greenfoot.setWorld(gameWorld);
-            TitleScreen.mainTheme.stop();
-
-            
+            TitleScreen.mainTheme.stop();//stops the main menu music
         }
-        
-        if(Greenfoot.isKeyDown("2"))
+        if(Greenfoot.isKeyDown("2"))//1 minute(60 seconds) as the time limit
         {
             timeValue = 60;
             MyWorld GameWorld = new MyWorld();
             Greenfoot.setWorld(GameWorld);
-            TitleScreen.mainTheme.stop();
+            TitleScreen.mainTheme.stop();//stops the main menu music
         }
-        
-        if(Greenfoot.isKeyDown("3"))
+        if(Greenfoot.isKeyDown("3"))//2 minute(120 seconds) as the time limit
         {
             timeValue = 120;
             MyWorld GameWorld = new MyWorld();
             Greenfoot.setWorld(GameWorld);
-            TitleScreen.mainTheme.stop();
+            TitleScreen.mainTheme.stop();//stops the main menu music
         }
-        
-        if(Greenfoot.isKeyDown("4"))
+        if(Greenfoot.isKeyDown("4"))//3 minute(180 seconds) as the time limit
         {
             timeValue = 180;
             MyWorld GameWorld = new MyWorld();
             Greenfoot.setWorld(GameWorld);
-            TitleScreen.mainTheme.stop();
+            TitleScreen.mainTheme.stop();//stops the main menu music
         }
-        
-        
     }
 }

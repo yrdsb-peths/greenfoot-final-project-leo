@@ -3,28 +3,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class OtherHouse3 here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * building for the Egg to spawn in
+ * 
+ * Leo Xu
+ * June 15 2022
  */
 public class OtherHouse3 extends World
 {
-
-    /**
-     * Constructor for objects of class OtherHouse3.
-     * 
-     */
-    
     SimpleTimer timer = new SimpleTimer();
-    //label in my world
     Label timeLabel = new Label("", 30);
+    
     public OtherHouse3()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        // Create a new world with 474x430 cells with a cell size of 1x1 pixels.
         super(474, 430, 1); 
         setBackground(new GreenfootImage("images/OtherHouse1.png"));
         
         addObject(timeLabel, 260, 70);
         
+        //boundaries for OtherHouse3
         Boundary bound1 = new Boundary(100, 20);
         addObject(bound1, 50, 220);
         
@@ -61,31 +58,18 @@ public class OtherHouse3 extends World
     
     public void act()
     {
-         MouseInfo m = Greenfoot.getMouseInfo();
-        if (m != null)
-        {
-            showText(String.valueOf(m.getX()), 200, 200);
-            showText(String.valueOf(m.getY()), 300, 200);
-        }
-        
-        if(timer.millisElapsed() >= 1000)
+        if(timer.millisElapsed() >= 1000)//TimeKeeper tracks the time
         {
             timer.mark();
             TimeKeeper.Updatetime();
-            timeLabel.setValue("time left: " + TimeKeeper.timeleft);
-                        
+            timeLabel.setValue("time left: " + TimeKeeper.timeleft);      
         }
-        
-        
-        if (TimeKeeper.timeleft == 0)
+        if (TimeKeeper.timeleft == 0)//TimeKeeper tracks the time
         {
             LoseScreen gameWorld = new LoseScreen();
             Greenfoot.setWorld(gameWorld);
-            MyWorld.music.stop();
-            
+            MyWorld.music.stop();//stops the gameplay music
         }
-
-
     }
     
 }
