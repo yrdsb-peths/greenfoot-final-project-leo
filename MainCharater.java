@@ -24,9 +24,9 @@ public class MainCharater extends Actor
     private boolean isFacingRight = true;
     private boolean isFacingUp = true;
     
-    int size = 50;//quick way to adjust all the MainCharater's image sizes
-    int CharaterSpeed = 3;//quick way to adjust all the MainCharater's speed
-    int SprintSpeed = 10;//quick way to adjust all the MainCharater's sprint speed
+    private int size = 50;//quick way to adjust all the MainCharater's image sizes
+    private int CharaterSpeed = 2;//quick way to adjust all the MainCharater's speed
+    private int SprintSpeed = 5;//quick way to adjust all the MainCharater's sprint speed
     
     public MainCharater()
     {
