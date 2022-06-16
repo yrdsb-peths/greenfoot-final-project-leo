@@ -5,8 +5,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * 
  * This world displays game over when you run out of time limit
  * 
- * Leo  Xu
- * June 15 2022
+ * @author Leo Xu
+ * @date June 15 2022
  */
 public class LoseScreen extends World
 {

@@ -5,8 +5,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * 
  * Objective of the game
  * 
- * Leo Xu
- * June 15 2022
+ * @author Leo Xu
+ * @date June 15 2022
  * 
  */
 public class Egg extends Actor

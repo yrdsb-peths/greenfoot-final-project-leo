@@ -5,8 +5,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * 
  * This Actor is used to create invisible walls in the playable world maps
  * 
- * Leo Xu
- * June 15 2022
+ * @author Leo Xu
+ * @date June 15 2022
  * 
  */
 public class Boundary extends Actor

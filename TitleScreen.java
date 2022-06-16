@@ -5,8 +5,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * 
  * This is the main menu of the game with buttons leading to play the game, and instructions/controls
  *
- * Leo  Xu
- * June 15 2022
+ * @author Leo Xu
+ * @date June 15 2022
  *
  *
  */

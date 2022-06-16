@@ -5,9 +5,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * 
  * The playable charater that allows you to interect the world
  * 
- * Leo Xu
- * 
- * June 15 2022
+ * @author Leo Xu
+ * @date June 15 2022
  * 
  */
 public class MainCharacter extends Actor

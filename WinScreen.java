@@ -5,8 +5,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * 
  * This world displays the victory screen when you find the egg
  * 
- * Leo  Xu
- * June 15 2022
+ * @author Leo Xu
+ * @date June 15 2022
  * 
  */
 public class WinScreen extends World

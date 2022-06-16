@@ -6,8 +6,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Another world that can be accessed from the portal of MyWorld
  * Has portals leading to OtherHouse1, OtherHouse2, OtherHouse3
  * 
- * Leo Xu
- * June 15 2022
+ * @author Leo Xu
+ * @date June 15 2022
  */
 public class OtherWorld extends World
 {

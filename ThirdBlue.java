@@ -5,8 +5,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * 
  * building for the Egg to spawn in
  * 
- * Leo Xu
- * June 15 2022
+ * @author Leo Xu
+ * @date June 15 2022
  */
 public class ThirdBlue extends World
 {

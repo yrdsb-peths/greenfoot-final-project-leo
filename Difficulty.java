@@ -5,8 +5,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * 
  * This is world allows you to choose the time limit as difficulty
  * 
- * Leo Xu
- * June 15 2022
+ * @author Leo Xu
+ * @date June 15 2022
  */
 public class Difficulty extends World
 {

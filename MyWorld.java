@@ -9,8 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Has portals leading to MyHouse1, MyHouse2, MyHouse3, MyCenter, and MyBuilding.
  * Has the randomizer that generates the Egg across different worlds.
  * 
- * Leo Xu
- * June 15 2022 
+ * @author Leo Xu
+ * @date June 15 2022
  * 
  */
 public class MyWorld extends World

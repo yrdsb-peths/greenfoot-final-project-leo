@@ -5,10 +5,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * 
  * This Portal Actor allows player to ravel across different worlds
  * 
- * Leo Xu
- * June 15 2022
+ * @author Leo Xu
+ * @date June 15 2022
  * 
  */
+
 public class Portal extends Actor
 {
     private Portal portal; // allows multiple portal in one world
