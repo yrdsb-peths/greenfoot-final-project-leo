@@ -86,7 +86,7 @@ public class OtherWorld extends World
         Boundary bound12 = new Boundary(50, 50);
         addObject(bound12, 480, 500);
         
-        Boundary bound13 = new Boundary(135, 75);
+        Boundary bound13 = new Boundary(135, 50);
         addObject(bound13, 140, 490);
         
         Boundary bound14 = new Boundary(170, 110);
