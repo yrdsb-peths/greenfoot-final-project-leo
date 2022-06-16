@@ -13,13 +13,18 @@ public class WinScreen extends World
 {
     GreenfootSound winTheme = new GreenfootSound("win.mp3");
     Label titleLabel = new Label("Return To Main Menu(Press <f>)", 30);
+    
+    public static int score = 1;
+    Label titleLabel2 = new Label("Eggs Collected So Far: " + score, 30);
 
     public WinScreen()
     {    
         // Create a new world with 500x438 cells with a cell size of 1x1 pixels.
         super(500, 438, 1);
         addObject(titleLabel, 250, 350);
+        addObject(titleLabel2, 250, 400);
         setBackground(new GreenfootImage("images/win1.png"));
+        
         MyWorld.music.stop();//stops the gameplay music
         winTheme.setVolume(20);
         winTheme.play();//play the win music

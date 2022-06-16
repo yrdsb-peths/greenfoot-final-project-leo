@@ -164,9 +164,8 @@ public class MyWorld extends World
     
      public void spawnEgg()//get a random number from 0-11 and the number determines where the Egg spawns in one of the worlds house/building class
     {
-        //int rand = Greenfoot.getRandomNumber(11);
-        int rand = 0;
-
+        int rand = Greenfoot.getRandomNumber(11);
+        
         if (rand == 0)
         {
             int x = 30 + Greenfoot.getRandomNumber(200);

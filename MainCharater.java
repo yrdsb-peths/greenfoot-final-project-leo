@@ -180,6 +180,7 @@ public class MainCharater extends Actor
         {
             removeTouching(Egg.class);
             WinScreen gameWorld = new WinScreen();
+            WinScreen.score++;//increase the score of eggs collected at WinScreen
             Greenfoot.setWorld(gameWorld);
         }
     }
