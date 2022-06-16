@@ -17,7 +17,8 @@ public class Tutorial extends World
     Label titleLabel3 = new Label("Press <f> To Go Back", 30);
     Label titleLabel4 = new Label("Objective: Find And Touch The Egg to Win", 30);
     Label titleLabel5 = new Label("You Can Go Through Doors and Entrances", 30);
-    Label titleLabel6 = new Label("The Egg Is Hidden In One Of the Room/Building", 30);
+    Label titleLabel6 = new Label("The Egg Is Hidden In One Of the House/Building", 20);
+    Label titleLabel7 = new Label("Note: If Door/Entrance Doesn't Work, Step Back A Bit", 20);
 
     public Tutorial()
     {    
@@ -30,7 +31,8 @@ public class Tutorial extends World
         addObject(titleLabel3, 150, 500);
         addObject(titleLabel4, 500, 400);
         addObject(titleLabel5, 500, 20);
-        addObject(titleLabel5, 200, 350);
+        addObject(titleLabel6, 450, 425);
+        addObject(titleLabel7, 500, 40);
     }
     
     public void act()

@@ -156,7 +156,7 @@ public class MyWorld extends World
         addObject(bound20, 330, 530);
         
         
-        MainCharater main = new MainCharater();//spawn MainCharater
+        MainCharacter main = new MainCharacter();//spawn MainCharater
         addObject(main, 200, 200);
         
         spawnEgg();

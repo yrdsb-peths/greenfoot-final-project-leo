@@ -41,7 +41,7 @@ public class Portal extends Actor
     
     public void act()
     {
-        Actor actor = getOneIntersectingObject(MainCharater.class); //let portal know its tocuhing MainCharater
+        Actor actor = getOneIntersectingObject(MainCharacter.class); //let portal know its tocuhing MainCharater
         if (!this.active && actor == null) this.active = true; //re-activates the portal;
         if (this.active && actor != null) portal.getActor(actor); //teleport MainCharater
         

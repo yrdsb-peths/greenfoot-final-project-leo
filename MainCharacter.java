@@ -10,7 +10,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * June 15 2022
  * 
  */
-public class MainCharater extends Actor
+public class MainCharacter extends Actor
 {
     //charater animation images
     private GreenfootImage[] upImages;
@@ -28,7 +28,7 @@ public class MainCharater extends Actor
     private int CharaterSpeed = 2;//quick way to adjust all the MainCharater's speed
     private int SprintSpeed = 5;//quick way to adjust all the MainCharater's sprint speed
     
-    public MainCharater()
+    public MainCharacter()
     {
         upImages = new GreenfootImage[2];
         downImages = new GreenfootImage[2];
