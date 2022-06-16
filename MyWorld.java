@@ -183,8 +183,8 @@ public class MyWorld extends World
         
         
         
-        Elephant ele = new Elephant();
-        addObject(ele, 200, 200);
+        MainCharater main = new MainCharater();
+        addObject(main, 200, 200);
         
         spawnEgg();
         

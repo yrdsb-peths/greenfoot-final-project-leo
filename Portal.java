@@ -3,13 +3,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class Portal here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Leo Xu
+ * This Portal Actor allows player to ravel across different worlds
  */
 public class Portal extends Actor
 {
-    private Portal portal; 
-    private boolean active; 
+    private Portal portal; // allows multiple portal in one world
+    private boolean active; //used if this portal can be used
     private GreenfootImage portalImage = new GreenfootImage ("images/baal2.png");
     
     
@@ -44,41 +44,13 @@ public class Portal extends Actor
     
     public void act()
     {
-        Actor actor = getOneIntersectingObject(Elephant.class);
-        if(actor == null)
-        {
-            getWorld().showText("null", 100, 100);
-          
-        }
-        else if (actor != null)
-        {
-            getWorld().showText("not null", 100, 100);
-        }
-        
-        
-        if (!this.active && actor == null) this.active = true;
-        if (this.active && actor != null) portal.getActor(actor); 
+        Actor actor = getOneIntersectingObject(MainCharater.class); //let portal know its tocuhing MainCharater
+        if (!this.active && actor == null) this.active = true; //re-activates the portal;
+        if (this.active && actor != null) portal.getActor(actor); //teleport MainCharater
         
         
     }
-    
-    /*public void check()
-    {
-        if(isTouching(Elephant.class))
-        {
-            getWorld().showText("press e", 400, 400);
-            //Greenfoot.playSound("sounds/smw_coin.wav");
-            MyWorld world = (MyWorld) getWorld();
-            
-        }
-        else
-        {
-            getWorld().showText("", 400, 400);
-            MyWorld world = (MyWorld) getWorld();
-        }
-    }*/
-    
-   
+       
     public void getActor(Actor actor)
     {
         if (this.getWorld().equals(actor.getWorld()))
@@ -90,6 +62,6 @@ public class Portal extends Actor
             this.getWorld().addObject(actor, this.getX(), this.getY()); 
             Greenfoot.setWorld(this.getWorld()); 
         }
-        active = false;
+        active = false; // de-activate portal and re-activates when MainCharater leaves portal
     }
 }

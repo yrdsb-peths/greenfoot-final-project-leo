@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Portal
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Portal\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Portal\ here.\r\n\ \r\n\ Leo\ Xu\r\n\ This\ Portal\ Actor\ allows\ player\ to\ ravel\ across\ different\ worlds\r\n
 comment1.params=
 comment1.target=Portal()
 comment2.params=portal
@@ -13,5 +13,4 @@ comment5.params=
 comment5.target=void\ act()
 comment6.params=actor
 comment6.target=void\ getActor(greenfoot.Actor)
-comment6.text=public\ void\ check()\r\n\ \ \ \ {\r\n\ \ \ \ \ \ \ \ if(isTouching(Elephant.class))\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ getWorld().showText("press\ e",\ 400,\ 400);\r\n\ \ \ \ \ \ \ \ \ \ \ \ //Greenfoot.playSound("sounds/smw_coin.wav");\r\n\ \ \ \ \ \ \ \ \ \ \ \ MyWorld\ world\ \=\ (MyWorld)\ getWorld();\r\n\ \ \ \ \ \ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ else\r\n\ \ \ \ \ \ \ \ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ getWorld().showText("",\ 400,\ 400);\r\n\ \ \ \ \ \ \ \ \ \ \ \ MyWorld\ world\ \=\ (MyWorld)\ getWorld();\r\n\ \ \ \ \ \ \ \ }\r\n}
 numComments=7

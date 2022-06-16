@@ -1,4 +1,4 @@
-/*import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Elephant here.
@@ -6,7 +6,7 @@
  * Leo Xu
  * The playable charater that allows you to interect the world
  */
-/*public class Elephant extends Actor
+public class MainCharater extends Actor
 {
     //charater animation images
     private GreenfootImage[] upImages;
@@ -24,7 +24,7 @@
    
     
     
-    public Elephant()
+    public MainCharater()
     {
         upImages = new GreenfootImage[2];
         downImages = new GreenfootImage[2];
@@ -196,4 +196,4 @@
  
     
 
-}*/
+}
