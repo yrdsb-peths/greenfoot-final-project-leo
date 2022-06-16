@@ -20,6 +20,7 @@ public class MainCharater extends Actor
     private boolean isFacingRight = true;
     private boolean isFacingUp = true;
     int size = 50;//quick way to adjust all the MainCharater's image sizes.
+    int CharaterSpeed = 2;
     
    
     
@@ -104,7 +105,7 @@ public class MainCharater extends Actor
         if(Greenfoot.isKeyDown("d"))//MainCharater moves right
         {
             isFacingRight = true;
-            move(3);
+            move(CharaterSpeed);
             idleAction();
             
             if(Greenfoot.isKeyDown("c"))//MainCharater moves right faster
@@ -117,7 +118,7 @@ public class MainCharater extends Actor
         if(Greenfoot.isKeyDown("a"))//MainCharater moves left
         {
             isFacingRight = false;
-            move(-3);
+            move(-CharaterSpeed);
             idleAction();
             
             if(Greenfoot.isKeyDown("c"))//MainCharater moves left faster
@@ -131,7 +132,7 @@ public class MainCharater extends Actor
         {
             int x = getX();
             int y = getY();
-            setLocation(x, y -3);
+            setLocation(x, y -CharaterSpeed);
             
             isFacingUp = true;
             idleActionTwo();
@@ -151,7 +152,7 @@ public class MainCharater extends Actor
         {
             int x = getX();
             int y = getY();
-            setLocation(x, y + 3);
+            setLocation(x, y + CharaterSpeed);
             isFacingUp = false;
             idleActionTwo();
             

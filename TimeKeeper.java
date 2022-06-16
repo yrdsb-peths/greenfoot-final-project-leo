@@ -6,8 +6,7 @@
  */
 public class TimeKeeper  
 {
-    // instance variables - replace the example below with your own
-    public static int timeleft;
+    public static int timeleft;//tracks the time across all worlds
     /**
      * Constructor for objects of class TimeKeeper
      */
