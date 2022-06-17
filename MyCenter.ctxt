@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=MyCenter
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyCenter\ here.\r\n\ \r\n\ building\ for\ the\ Egg\ to\ spawn\ in\r\n\ \r\n\ \r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyCenter\ here.\r\n\ \r\n\ building\ for\ the\ Egg\ to\ spawn\ in\r\n\ \r\n\ @author\ Leo\ Xu\r\n\ @date\ June\ 15\ 2022\r\n
 comment1.params=
 comment1.target=MyCenter()
 comment2.params=

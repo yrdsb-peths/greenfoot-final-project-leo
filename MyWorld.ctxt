@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=MyWorld
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ The\ main\ world\ when\ you\ start\ the\ game.\r\n\ Has\ portals\ leading\ to\ MyHouse1,\ MyHouse2,\ MyHouse3,\ MyCenter,\ and\ MyBuilding.\r\n\ Has\ the\ randomizer\ that\ generates\ the\ Egg\ across\ different\ worlds.\r\n\ \r\n\ \r\n\ \r\n
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ MyWorld\ here.\r\n\ \r\n\ The\ main\ world\ when\ you\ start\ the\ game.\r\n\ Has\ portals\ leading\ to\ MyHouse1,\ MyHouse2,\ MyHouse3,\ MyCenter,\ and\ MyBuilding.\r\n\ Has\ the\ randomizer\ that\ generates\ the\ Egg\ across\ different\ worlds.\r\n\ \r\n\ @author\ Leo\ Xu\r\n\ @date\ June\ 15\ 2022\r\n\ \r\n
 comment1.params=
 comment1.target=MyWorld()
 comment2.params=

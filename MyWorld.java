@@ -98,7 +98,7 @@ public class MyWorld extends World
         Boundary bound1 = new Boundary(300, 10);
         addObject(bound1, 125, 470);
         
-        Boundary bound2 = new Boundary(150, 10);
+        Boundary bound2 = new Boundary(150, 5);
         addObject(bound2, 205, 345);
         
         Boundary bound3 = new Boundary(10, 60);

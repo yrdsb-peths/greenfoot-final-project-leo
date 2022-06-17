@@ -38,7 +38,7 @@ public class OtherWorld extends World
         other1.addObject(portal, 270, 400);
         
         portal = new Portal();// OtherHous2 portal
-        this.addObject(portal, 140, 550); 
+        this.addObject(portal, 140, 530); 
         portal = new Portal(portal);
         other2 = new OtherHouse2(); 
         other2.addObject(portal, 270, 400);
@@ -86,8 +86,8 @@ public class OtherWorld extends World
         Boundary bound12 = new Boundary(50, 50);
         addObject(bound12, 480, 500);
         
-        Boundary bound13 = new Boundary(135, 50);
-        addObject(bound13, 140, 490);
+        Boundary bound13 = new Boundary(135, 30);
+        addObject(bound13, 140, 480);
         
         Boundary bound14 = new Boundary(170, 110);
         addObject(bound14, 350, 510);
